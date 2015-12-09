@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="XHUserCollectionCell" id="gTV-IL-0wX" customClass="XHUserCollectionCell" customModule="HuaBanNew" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="183" height="173"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="183" height="173"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0vm-yg-Wp9">
+                        <rect key="frame" x="0.0" y="0.0" width="183" height="132.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pGD-nU-KxO">
+                                <rect key="frame" x="56.5" y="10" width="70" height="70"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pGD-nU-KxO" secondAttribute="height" multiplier="1:1" id="s2j-SU-p97"/>
+                                    <constraint firstAttribute="width" constant="70" id="uMW-L7-TjI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33粉丝" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X55-GR-G0Y">
+                                <rect key="frame" x="71.5" y="118" width="39.5" height="14.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="星落尘" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip9-kv-eAZ">
+                                <rect key="frame" x="65.5" y="90" width="51" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ip9-kv-eAZ" firstAttribute="top" secondItem="pGD-nU-KxO" secondAttribute="bottom" constant="10" id="9Ps-il-tg6"/>
+                            <constraint firstItem="X55-GR-G0Y" firstAttribute="top" secondItem="ip9-kv-eAZ" secondAttribute="bottom" constant="8" id="MIS-Vd-Dsk"/>
+                            <constraint firstItem="ip9-kv-eAZ" firstAttribute="centerX" secondItem="0vm-yg-Wp9" secondAttribute="centerX" id="MOi-aI-zlK"/>
+                            <constraint firstItem="X55-GR-G0Y" firstAttribute="centerX" secondItem="0vm-yg-Wp9" secondAttribute="centerX" id="QWk-a5-ZLq"/>
+                            <constraint firstItem="pGD-nU-KxO" firstAttribute="top" secondItem="0vm-yg-Wp9" secondAttribute="top" constant="10" id="TbQ-ES-beq"/>
+                            <constraint firstItem="pGD-nU-KxO" firstAttribute="centerX" secondItem="0vm-yg-Wp9" secondAttribute="centerX" id="bz5-LM-TNe"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rn7-s0-Yhg">
+                        <rect key="frame" x="0.0" y="133" width="183" height="40"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN6-Am-hfR">
+                                <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
+                                <animations/>
+                                <state key="normal" title="+ 关注">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="已关注">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CN6-Am-hfR" secondAttribute="trailing" id="Be4-ZR-SbR"/>
+                            <constraint firstAttribute="height" constant="40" id="Ggu-x6-ooS"/>
+                            <constraint firstAttribute="bottom" secondItem="CN6-Am-hfR" secondAttribute="bottom" id="OzM-Wf-XUR"/>
+                            <constraint firstItem="CN6-Am-hfR" firstAttribute="top" secondItem="rn7-s0-Yhg" secondAttribute="top" id="Pkm-7p-fIM"/>
+                            <constraint firstItem="CN6-Am-hfR" firstAttribute="leading" secondItem="rn7-s0-Yhg" secondAttribute="leading" id="ZTa-nP-sHR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <constraints>
+                <constraint firstItem="0vm-yg-Wp9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0eA-XE-69O"/>
+                <constraint firstItem="0vm-yg-Wp9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FqJ-jT-yBv"/>
+                <constraint firstAttribute="bottom" secondItem="rn7-s0-Yhg" secondAttribute="bottom" id="M99-dj-BoY"/>
+                <constraint firstAttribute="trailing" secondItem="0vm-yg-Wp9" secondAttribute="trailing" id="aKp-Vb-26z"/>
+                <constraint firstAttribute="trailing" secondItem="rn7-s0-Yhg" secondAttribute="trailing" id="bi0-Vf-V0x"/>
+                <constraint firstItem="rn7-s0-Yhg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ktW-jX-5bl"/>
+                <constraint firstItem="rn7-s0-Yhg" firstAttribute="top" secondItem="0vm-yg-Wp9" secondAttribute="bottom" constant="0.5" id="yAc-03-UVX"/>
+            </constraints>
+            <size key="customSize" width="183" height="169"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="3"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="followBtn" destination="CN6-Am-hfR" id="Fy7-nt-kBZ"/>
+                <outlet property="followCountLabel" destination="X55-GR-G0Y" id="Tfy-FJ-bNr"/>
+                <outlet property="nameLabel" destination="ip9-kv-eAZ" id="gwz-IX-3JU"/>
+                <outlet property="photoImageView" destination="pGD-nU-KxO" id="my1-PF-5Lr"/>
+            </connections>
+            <point key="canvasLocation" x="361.5" y="224.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="aboutIcon" width="84" height="84"/>
+    </resources>
+</document>
