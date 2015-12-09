@@ -36,14 +36,10 @@ class AppUser : NSObject
 {
     
     // 资源多
-//    var urlname = "aocknqhy"
-//    var user_id: NSNumber = 15375173
-//    var username = "ミ獨家試愛丶"
-    var avatar = "http://img.hb.aicdn.com/2c20ac1d01e64f122adaf1219320306c0eb0e8532d1a-2iokJg"
-    
-    var urlname = "yunyifenglin"
-    var user_id: NSNumber = 18016051
-    var username = "云逸枫林"
+    var urlname = "aocknqhy"
+    var user_id: NSNumber = 15375173
+    var username = "ミ獨家試愛丶"
+    var avatar = "http://img.hb.aicdn.com/2c20ac1d01e64f122adaf1219320306c0eb0e8532d1a-2iokJg_sq75"
 
     override init() {
         super.init()
@@ -150,7 +146,6 @@ class AppURL {
     
     static func search(str: String, categoryName: String?, type: SearchType?) -> String {
         //http ://huaban.com/search/?q=%E5%A9%9A%E7%BA%B1&md=404in
-        //http ://huaban.com/search/?q=美女
         //http ://huaban.com/search/?q=%E5%96%B5%E6%98%9F%E4%BA%BA&category=anime
         //http ://huaban.com/search/?q=%E5%96%B5%E6%98%9F%E4%BA%BA
         //http ://huaban.com/search/gift/?q=%E5%96%B5%E6%98%9F%E4%BA%BA

@@ -30,6 +30,8 @@ class SearchResultController: BaseViewController,UICollectionViewDelegate,UIColl
     }
     var selectIndex = 0 {
         didSet {
+            self.collectionView.reloadData()
+            
             switch selectIndex {
             case 0:
                 if self.requestPins.page == 0 {
@@ -45,52 +47,60 @@ class SearchResultController: BaseViewController,UICollectionViewDelegate,UIColl
                 }
             default:break
             }
-            self.collectionView.reloadData()
-        }
-    }
-    
-    var boardDataSource = [Board]() {
-        didSet {
-            let lastItem = oldValue.count
-            //只刷新增加的数据，不能用reloadData，会造成闪屏
-            if self.boardDataSource.count > lastItem {
-                let indexPaths = (lastItem..<self.boardDataSource.count).map { NSIndexPath(forItem: $0, inSection: 0) }
-                
-                self.collectionView!.insertItemsAtIndexPaths(indexPaths)
-            } else { // headerRefresh
-                self.collectionView.reloadData()
-            }
-            
         }
     }
     
     var pinDataSource = [Pin]() {
         didSet {
-            let lastItem = oldValue.count
-            //只刷新增加的数据，不能用reloadData，会造成闪屏
-            if self.pinDataSource.count > lastItem {
-                let indexPaths = (lastItem..<self.pinDataSource.count).map { NSIndexPath(forItem: $0, inSection: 0) }
+            if self.selectIndex == 0 {
                 
-                self.collectionView!.insertItemsAtIndexPaths(indexPaths)
-            } else { // headerRefresh
-                self.collectionView.reloadData()
+                let lastItem = oldValue.count
+                //只刷新增加的数据，不能用reloadData，会造成闪屏
+                if self.pinDataSource.count > lastItem {
+                    let indexPaths = (lastItem..<self.pinDataSource.count).map { NSIndexPath(forItem: $0, inSection: 0) }
+                    
+                    self.collectionView!.insertItemsAtIndexPaths(indexPaths)
+                } else { // headerRefresh
+                    self.collectionView.reloadData()
+                }
+                
             }
-            
+        }
+    }
+    
+    var boardDataSource = [Board]() {
+        didSet {
+            if self.selectIndex == 1 {
+                
+                let lastItem = oldValue.count
+                //只刷新增加的数据，不能用reloadData，会造成闪屏
+                if self.boardDataSource.count > lastItem {
+                    let indexPaths = (lastItem..<self.boardDataSource.count).map { NSIndexPath(forItem: $0, inSection: 0) }
+                    
+                    self.collectionView!.insertItemsAtIndexPaths(indexPaths)
+                } else { // headerRefresh
+                    self.collectionView.reloadData()
+                }
+                
+            }
         }
     }
     
     var userDataSource = [User]() {
         didSet {
-            let lastItem = oldValue.count
-            //只刷新增加的数据，不能用reloadData，会造成闪屏
-            if self.userDataSource.count > lastItem {
-                let indexPaths = (lastItem..<self.userDataSource.count).map { NSIndexPath(forItem: $0, inSection: 0) }
-                
-                self.collectionView!.insertItemsAtIndexPaths(indexPaths)
-            } else { // headerRefresh
-                self.collectionView.reloadData()
-            }
             
+            if self.selectIndex == 2 {
+                let lastItem = oldValue.count
+                //只刷新增加的数据，不能用reloadData，会造成闪屏
+                if self.userDataSource.count > lastItem {
+                    let indexPaths = (lastItem..<self.userDataSource.count).map { NSIndexPath(forItem: $0, inSection: 0) }
+                    
+                    self.collectionView!.insertItemsAtIndexPaths(indexPaths)
+                } else { // headerRefresh
+                    self.collectionView.reloadData()
+                }
+                
+            }
         }
     }
     
@@ -275,7 +285,7 @@ class SearchResultController: BaseViewController,UICollectionViewDelegate,UIColl
             }) {[unowned self] (baseRequest, err) -> Void in
                 self.showError("加载失败")
                 print(err)
-
+                
                 self.requestUsers.page--
         }
     }
@@ -326,7 +336,7 @@ class SearchResultController: BaseViewController,UICollectionViewDelegate,UIColl
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         if self.segment.indexOfSelectedSegment == 0 {
-
+            
             let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as? XHWaterCollectionCell
             let frrr = self.view.convertRect(selectedCell!.frame, fromView:self.collectionView)
             
