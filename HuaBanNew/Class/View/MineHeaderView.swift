@@ -129,12 +129,12 @@ class MineHeaderView: UIView,UIScrollViewDelegate {
     func setInfo(model: User) {
         
         self.bgImageView.downloadImage(Url: NSURL(string: model.avatar as! String), placeholder: nil, success: { (imageURL, image) -> () in
-            self.bgImageView.image = image.blurredImageWithRadius(120, iterations: 2, tintColor: UIColor.blackColor())
-
+            self.bgImageView.image = image.blurredImageWithRadius(10, iterations: 2, tintColor:nil)
+            self.iconBtn.setImage(image, forState: .Normal)
             }, failure: nil)
         
         
-        self.iconBtn.downloadImage(Url: NSURL(string: model.avatar as! String), forState: .Normal)
+//        self.iconBtn.downloadImage(Url: NSURL(string: model.avatar as! String), forState: .Normal)
 
         
         nameLabel.text  = model.username

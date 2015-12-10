@@ -40,7 +40,7 @@ class AppUser : NSObject
     var user_id: NSNumber = 15375173
     var username = "ミ獨家試愛丶"
     var avatar = "http://img.hb.aicdn.com/2c20ac1d01e64f122adaf1219320306c0eb0e8532d1a-2iokJg_sq75"
-
+    
     override init() {
         super.init()
     }
@@ -52,9 +52,9 @@ class AppUser : NSObject
         }
         dispatch_once(&Static.onceToken) {
             Static.instance = AppUser()
-//            if let dict = XHSaveHelper.getAnyObjectForKey("DefaultUser") {
-//                Static.instance?.mj_setKeyValues(dict)
-//            }
+            //            if let dict = XHSaveHelper.getAnyObjectForKey("DefaultUser") {
+            //                Static.instance?.mj_setKeyValues(dict)
+            //            }
         }
         return Static.instance!
     }
@@ -71,11 +71,11 @@ class AppUser : NSObject
 
 
 class AppURL {
-
+    
     //{"id":"home","name":"家居/装饰","group":0,"nav_link":"/favorite/home/"}
     let discoverModel = CategoryModel().mj_setKeyValues(["name":"发现", "nav_link":"/all"])
     let latestModel = CategoryModel().mj_setKeyValues(["name":"最新", "nav_link":"/all"])
-
+    
     class var shareInstance: AppURL {
         struct Static {
             static var onceToken: dispatch_once_t = 0
@@ -91,16 +91,16 @@ class AppURL {
         case categories = "/categories/" //获取分类列表
         
         /**
-         http://huaban.com/mobile_topics/75/posts? 朋友圈必备图
-         */
+        http://huaban.com/mobile_topics/75/posts? 朋友圈必备图
+        */
         //http://api.huaban.com/mobile_topics/featured
         case topicIds = "/mobile_topics/featured" // 获取id
         
     }
     
     /**
-    {"id":"beauty","name":"美女","group":5,"nav_link":"/favorite/beauty/"}
-    */
+     {"id":"beauty","name":"美女","group":5,"nav_link":"/favorite/beauty/"}
+     */
     func discoverCategory(category: String) -> String {
         //http://api.huaban.com/favorite/beauty  "nav_link":"/favorite/games/"
         return String(format: "http://api.huaban.com%@", category)
