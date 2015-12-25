@@ -1,7 +1,8 @@
 # HuaBanNewGit 
 ===
 - 用 swift 实现的花瓣app的效果, 也是练习swift, 仅供学习交流使用. 
-- 项目使用 ARC 和 CocoaPods
+- 项目使用 ARC 和 CocoaPods 
+- iOS 8.0
 
 GitHub：[chengxianghe](https://github.com/chengxianghe)  |  Blog：[云逸枫林](http://www.cnblogs.com/chengxianghe)  |   WeiBo：[云逸枫林](http://weibo.com/yunyifenglin)
 
