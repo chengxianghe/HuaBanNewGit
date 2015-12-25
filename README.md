@@ -15,7 +15,11 @@ GitHub：[chengxianghe](https://github.com/chengxianghe) ｜ Blog：[云逸枫�
 
 ## Screenshots
 
-[![Alt][screenshot1]]    [![Alt][screenshot2]]    [![Alt][screenshot3]]    [![Alt][screenshot4]]    [![Alt][screenshot5]]
+- GIF
+- [![Alt][screenshot5]]
+
+- PNG
+- [![Alt][screenshot1]]    [![Alt][screenshot2]]    [![Alt][screenshot3]]    [![Alt][screenshot4]]    
 [screenshot1]: https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.31.08.png?raw=true
 [screenshot2]: https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.28.53.png?raw=true
 [screenshot3]: https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.27.22.png?raw=true
