@@ -25,6 +25,7 @@
 		148EA1AA1C0AC85C00C11A90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148EA1A91C0AC85C00C11A90 /* AppDelegate.swift */; };
 		148EA1B11C0AC85C00C11A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148EA1B01C0AC85C00C11A90 /* Assets.xcassets */; };
 		148EA1B41C0AC85C00C11A90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148EA1B21C0AC85C00C11A90 /* LaunchScreen.storyboard */; };
+		1491E1201C2D2A1900AD0C42 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491E11F1C2D2A1900AD0C42 /* FXBlurView.m */; };
 		149DD9FA1C0B174B00B0F87C /* WebImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149DD9F91C0B174B00B0F87C /* WebImageExt.swift */; };
 		149DDA0B1C0D43CC00B0F87C /* NavCustomPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149DDA0A1C0D43CC00B0F87C /* NavCustomPop.swift */; };
 		149DDA0F1C0D48E200B0F87C /* UINavigation+Pop.m in Sources */ = {isa = PBXBuildFile; fileRef = 149DDA0E1C0D48E200B0F87C /* UINavigation+Pop.m */; };
@@ -32,7 +33,6 @@
 		149DDA511C0E1AF800B0F87C /* FansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149DDA501C0E1AF800B0F87C /* FansViewController.swift */; };
 		14E2584D1C11869600A8DA5B /* Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2584B1C11869600A8DA5B /* Safe.swift */; };
 		14E2584E1C11869600A8DA5B /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E2584C1C11869600A8DA5B /* Size.swift */; };
-		14F4459C1C0AFFD900D1FF41 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F445791C0AFFD900D1FF41 /* FXBlurView.m */; };
 		14F4459D1C0AFFD900D1FF41 /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F4457C1C0AFFD900D1FF41 /* JTSAnimatedGIFUtility.m */; };
 		14F4459E1C0AFFD900D1FF41 /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F4457E1C0AFFD900D1FF41 /* JTSImageInfo.m */; };
 		14F4459F1C0AFFD900D1FF41 /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F445801C0AFFD900D1FF41 /* JTSImageViewController.m */; };
@@ -162,6 +162,8 @@
 		148EA1B01C0AC85C00C11A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		148EA1B31C0AC85C00C11A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		148EA1B51C0AC85C00C11A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1491E11E1C2D2A1900AD0C42 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		1491E11F1C2D2A1900AD0C42 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		149DD9F91C0B174B00B0F87C /* WebImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebImageExt.swift; sourceTree = "<group>"; };
 		149DDA0A1C0D43CC00B0F87C /* NavCustomPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavCustomPop.swift; sourceTree = "<group>"; };
 		149DDA0D1C0D48E200B0F87C /* UINavigation+Pop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigation+Pop.h"; sourceTree = "<group>"; };
@@ -171,8 +173,6 @@
 		14E2584B1C11869600A8DA5B /* Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safe.swift; sourceTree = "<group>"; };
 		14E2584C1C11869600A8DA5B /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		14F445711C0AFFB500D1FF41 /* HuaBanNew-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HuaBanNew-Bridging-Header.h"; sourceTree = "<group>"; };
-		14F445781C0AFFD900D1FF41 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
-		14F445791C0AFFD900D1FF41 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		14F4457B1C0AFFD900D1FF41 /* JTSAnimatedGIFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSAnimatedGIFUtility.h; sourceTree = "<group>"; };
 		14F4457C1C0AFFD900D1FF41 /* JTSAnimatedGIFUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSAnimatedGIFUtility.m; sourceTree = "<group>"; };
 		14F4457D1C0AFFD900D1FF41 /* JTSImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageInfo.h; sourceTree = "<group>"; };
@@ -390,6 +390,15 @@
 			path = HuaBanNew;
 			sourceTree = "<group>";
 		};
+		1491E11D1C2D2A1900AD0C42 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				1491E11E1C2D2A1900AD0C42 /* FXBlurView.h */,
+				1491E11F1C2D2A1900AD0C42 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
 		149DDA091C0D43A500B0F87C /* NavgationPop */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,8 +428,8 @@
 		14F445751C0AFFD900D1FF41 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				1491E11D1C2D2A1900AD0C42 /* FXBlurView */,
 				14F445761C0AFFD900D1FF41 /* CHTCollectionViewWaterfallLayout */,
-				14F445771C0AFFD900D1FF41 /* FXBlurView */,
 				14F4457A1C0AFFD900D1FF41 /* JTSImageViewController */,
 				14F445871C0AFFD900D1FF41 /* NSStringEmojize */,
 				14F4458C1C0AFFD900D1FF41 /* WMPageController */,
@@ -434,15 +443,6 @@
 			children = (
 			);
 			path = CHTCollectionViewWaterfallLayout;
-			sourceTree = "<group>";
-		};
-		14F445771C0AFFD900D1FF41 /* FXBlurView */ = {
-			isa = PBXGroup;
-			children = (
-				14F445781C0AFFD900D1FF41 /* FXBlurView.h */,
-				14F445791C0AFFD900D1FF41 /* FXBlurView.m */,
-			);
-			path = FXBlurView;
 			sourceTree = "<group>";
 		};
 		14F4457A1C0AFFD900D1FF41 /* JTSImageViewController */ = {
@@ -994,6 +994,7 @@
 				14F446551C0B012E00D1FF41 /* MyPinViewController.swift in Sources */,
 				14F446251C0B011800D1FF41 /* XHCategoryTableView.swift in Sources */,
 				14F4467F1C0B013500D1FF41 /* Cover.swift in Sources */,
+				1491E1201C2D2A1900AD0C42 /* FXBlurView.m in Sources */,
 				14F445A11C0AFFD900D1FF41 /* UIApplication+JTSImageViewController.m in Sources */,
 				14F445A01C0AFFD900D1FF41 /* JTSSimpleImageDownloader.m in Sources */,
 				14F446861C0B013500D1FF41 /* Recommends.swift in Sources */,
@@ -1060,7 +1061,6 @@
 				14F4467B1C0B013500D1FF41 /* File.swift in Sources */,
 				14F445B21C0B001300D1FF41 /* SMSegment.swift in Sources */,
 				14F446801C0B013500D1FF41 /* Explores.swift in Sources */,
-				14F4459C1C0AFFD900D1FF41 /* FXBlurView.m in Sources */,
 				14F445A21C0AFFD900D1FF41 /* UIImage+JTSImageEffects.m in Sources */,
 				14F446871C0B013500D1FF41 /* Facets.swift in Sources */,
 				14F445A31C0AFFD900D1FF41 /* NSString+Emojize.m in Sources */,

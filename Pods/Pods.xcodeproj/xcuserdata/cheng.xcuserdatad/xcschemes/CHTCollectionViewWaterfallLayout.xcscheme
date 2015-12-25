@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9451187DE0958E40D79A6D48'
+               BlueprintIdentifier = 'C4FFCE21D84AF70479F15A64'
                BlueprintName = 'CHTCollectionViewWaterfallLayout'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'CHTCollectionViewWaterfallLayout.framework'>
