@@ -16,15 +16,21 @@ GitHub：[chengxianghe](https://github.com/chengxianghe) ｜ Blog：[云逸枫�
 ## Screenshots
 
 - GIF
-- [[!Alt][screenshot5]]
+![image](https://github.com/chengxianghe/watch-gif/blob/master/watch5.gif?raw=true)
 
 - PNG
-- [[!Alt][screenshot1]]    [[!Alt][screenshot2]]  [[!Alt][screenshot3]]    [[!Alt][screenshot4]]    
-[screenshot1]: https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.31.08.png?raw=true
-[screenshot2]: https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.28.53.png?raw=true
-[screenshot3]: https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.27.22.png?raw=true
-[screenshot4]: https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.27.09.png?raw=true
-[screenshot5]: https://github.com/chengxianghe/watch-gif/blob/master/watch5.gif?raw=true
+<h5>1.首页</h5>
+![iamge](https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.31.08.png?raw=true)
+
+<h5>2.搜索</h5>
+![image](https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.28.53.png?raw=true)
+
+<h5>3.支持横屏</h5>
+![image](https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.27.22.png?raw=true)
+
+<h5>3.支持横屏</h5>
+![image](https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.27.09.png?raw=true)
+
 
 #### Opensource libraries used
 
