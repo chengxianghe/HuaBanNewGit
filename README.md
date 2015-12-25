@@ -16,6 +16,7 @@ GitHub：[chengxianghe](https://github.com/chengxianghe) ｜ Blog：[云逸枫�
 ## Screenshots
 
 - GIF
+<h5>预览图</h5>
 ![image](https://github.com/chengxianghe/watch-gif/blob/master/watch5.gif?raw=true)
 
 - PNG
