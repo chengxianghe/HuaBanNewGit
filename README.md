@@ -4,7 +4,7 @@
 - 项目使用 ARC 和 CocoaPods 
 - iOS 8.0
 
-GitHub：[chengxianghe](https://github.com/chengxianghe)  |  Blog：[云逸枫林](http://www.cnblogs.com/chengxianghe)  |   WeiBo：[云逸枫林](http://weibo.com/yunyifenglin)
+GitHub：[chengxianghe](https://github.com/chengxianghe) 
 
 ## New features:
 - 1.0 集成了bugTags 可以直接反馈bug;
