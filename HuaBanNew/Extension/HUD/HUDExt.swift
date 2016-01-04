@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 
 extension SVProgressHUD {
     
@@ -55,6 +54,7 @@ extension UIViewController {
      *  手动隐藏HUD
      */
     func hideHud(after time: NSTimeInterval = 0) {
+        
         SVProgressHUD.dismissWithDelay(time)
     }
   

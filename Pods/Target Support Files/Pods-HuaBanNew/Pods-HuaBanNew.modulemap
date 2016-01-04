@@ -1,0 +1,6 @@
+framework module Pods_HuaBanNew {
+  umbrella header "Pods-HuaBanNew-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -5,7 +5,7 @@
 #ifndef HuaBanNew_Bridging_Header_h
 #define HuaBanNew_Bridging_Header_h
 
-//#import "SVProgressHUD.h"
+#import "SVProgressHUD.h"
 //#import "MJRefresh.h"
 //#import "MJExtension.h"
 #import "ZOZolaZoomTransition.h"
@@ -16,8 +16,6 @@
 //#import "MBProgressHUD.h"
 
 #import "FXBlurView.h"
-
-//#import "CategoryFile.h"
 #import "NSString+Emojize.h"
 #import "IBDesignableOnePixelConstant.h"
 #import "UISearchBar+Common.h"

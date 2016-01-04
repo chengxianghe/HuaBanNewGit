@@ -18,6 +18,10 @@
 		1438F9031C0EBA840000DC77 /* PathExtensionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438F9001C0EBA840000DC77 /* PathExtensionFile.swift */; };
 		1438F9051C0EBA960000DC77 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438F9041C0EBA960000DC77 /* Result.swift */; };
 		1438F9071C0EBAD20000DC77 /* FileManagerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438F9061C0EBAD20000DC77 /* FileManagerExt.swift */; };
+		14644EEA1C3A626300563391 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14644EE31C3A626300563391 /* SVIndefiniteAnimatedView.m */; };
+		14644EEB1C3A626300563391 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 14644EE51C3A626300563391 /* SVProgressHUD.bundle */; };
+		14644EEC1C3A626300563391 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 14644EE71C3A626300563391 /* SVProgressHUD.m */; };
+		14644EED1C3A626300563391 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 14644EE91C3A626300563391 /* SVRadialGradientLayer.m */; };
 		146500001C0FDCF30029F1FE /* Try.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465FFFF1C0FDCF30029F1FE /* Try.swift */; };
 		1465FFFE1C0FDCBB0029F1FE /* SwiftTryCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1465FFFD1C0FDCBB0029F1FE /* SwiftTryCatch.m */; };
 		1466E3591C0EDADD00F2A32C /* AFNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1466E1C61C0EDADD00F2A32C /* AFNetworkHelper.m */; };
@@ -135,7 +139,7 @@
 		14F446E81C0B0D4E00D1FF41 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F446D71C0B0D4E00D1FF41 /* UIViewExt.swift */; };
 		14F446E91C0B0D4E00D1FF41 /* SDCacheManagerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F446D91C0B0D4E00D1FF41 /* SDCacheManagerExt.swift */; };
 		14F446EC1C0B149C00D1FF41 /* categories in Resources */ = {isa = PBXBuildFile; fileRef = 14F446EB1C0B149C00D1FF41 /* categories */; };
-		712F453A3228AE1F2814F55F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1607B175BF0A8725D6E71CBC /* Pods.framework */; };
+		7B2923C83A80CC2EE6515365 /* Pods_HuaBanNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A326BEC51D9163FFE0B6F12C /* Pods_HuaBanNew.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +154,14 @@
 		1438F9001C0EBA840000DC77 /* PathExtensionFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathExtensionFile.swift; sourceTree = "<group>"; };
 		1438F9041C0EBA960000DC77 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		1438F9061C0EBAD20000DC77 /* FileManagerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerExt.swift; sourceTree = "<group>"; };
+		14644EE21C3A626300563391 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		14644EE31C3A626300563391 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		14644EE41C3A626300563391 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		14644EE51C3A626300563391 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		14644EE61C3A626300563391 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		14644EE71C3A626300563391 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		14644EE81C3A626300563391 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		14644EE91C3A626300563391 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		1465FFFC1C0FDCBB0029F1FE /* SwiftTryCatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftTryCatch.h; sourceTree = "<group>"; };
 		1465FFFD1C0FDCBB0029F1FE /* SwiftTryCatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftTryCatch.m; sourceTree = "<group>"; };
 		1465FFFF1C0FDCF30029F1FE /* Try.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Try.swift; sourceTree = "<group>"; };
@@ -293,8 +305,9 @@
 		14F446D91C0B0D4E00D1FF41 /* SDCacheManagerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDCacheManagerExt.swift; sourceTree = "<group>"; };
 		14F446EB1C0B149C00D1FF41 /* categories */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = categories; sourceTree = "<group>"; };
 		1607B175BF0A8725D6E71CBC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		756E54A6A6320F73AF52D930 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		E00CBC242D91157C1C5C99E3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8E53552591E7B30270E1565A /* Pods-HuaBanNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaBanNew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HuaBanNew/Pods-HuaBanNew.debug.xcconfig"; sourceTree = "<group>"; };
+		A326BEC51D9163FFE0B6F12C /* Pods_HuaBanNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HuaBanNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB73B94F6D3BAD4FD074482A /* Pods-HuaBanNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaBanNew.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuaBanNew/Pods-HuaBanNew.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,7 +315,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				712F453A3228AE1F2814F55F /* Pods.framework in Frameworks */,
+				7B2923C83A80CC2EE6515365 /* Pods_HuaBanNew.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +346,21 @@
 			path = FileManager;
 			sourceTree = "<group>";
 		};
+		14644EE11C3A626300563391 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				14644EE21C3A626300563391 /* SVIndefiniteAnimatedView.h */,
+				14644EE31C3A626300563391 /* SVIndefiniteAnimatedView.m */,
+				14644EE41C3A626300563391 /* SVProgressHUD-Prefix.pch */,
+				14644EE51C3A626300563391 /* SVProgressHUD.bundle */,
+				14644EE61C3A626300563391 /* SVProgressHUD.h */,
+				14644EE71C3A626300563391 /* SVProgressHUD.m */,
+				14644EE81C3A626300563391 /* SVRadialGradientLayer.h */,
+				14644EE91C3A626300563391 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		1465FFFB1C0FDCBB0029F1FE /* SwiftTry */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,8 +388,8 @@
 			children = (
 				148EA1A81C0AC85C00C11A90 /* HuaBanNew */,
 				148EA1A71C0AC85C00C11A90 /* Products */,
-				643FE6C021841D281DC834A4 /* Pods */,
 				BCD8E616E2DD10E390A405C8 /* Frameworks */,
+				24E4B16B037A877B09DBF3A4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -428,6 +456,7 @@
 		14F445751C0AFFD900D1FF41 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				14644EE11C3A626300563391 /* SVProgressHUD */,
 				1491E11D1C2D2A1900AD0C42 /* FXBlurView */,
 				14F445761C0AFFD900D1FF41 /* CHTCollectionViewWaterfallLayout */,
 				14F4457A1C0AFFD900D1FF41 /* JTSImageViewController */,
@@ -813,11 +842,11 @@
 			path = WebImage;
 			sourceTree = "<group>";
 		};
-		643FE6C021841D281DC834A4 /* Pods */ = {
+		24E4B16B037A877B09DBF3A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E00CBC242D91157C1C5C99E3 /* Pods.debug.xcconfig */,
-				756E54A6A6320F73AF52D930 /* Pods.release.xcconfig */,
+				8E53552591E7B30270E1565A /* Pods-HuaBanNew.debug.xcconfig */,
+				AB73B94F6D3BAD4FD074482A /* Pods-HuaBanNew.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -826,6 +855,7 @@
 			isa = PBXGroup;
 			children = (
 				1607B175BF0A8725D6E71CBC /* Pods.framework */,
+				A326BEC51D9163FFE0B6F12C /* Pods_HuaBanNew.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -837,12 +867,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 148EA1CE1C0AC85C00C11A90 /* Build configuration list for PBXNativeTarget "HuaBanNew" */;
 			buildPhases = (
-				6C2966E0E6B58FBB6B173362 /* Check Pods Manifest.lock */,
+				59F6A7BDFAECB607CCC25118 /* Check Pods Manifest.lock */,
 				148EA1A21C0AC85C00C11A90 /* Sources */,
 				148EA1A31C0AC85C00C11A90 /* Frameworks */,
 				148EA1A41C0AC85C00C11A90 /* Resources */,
-				D53EA29ECE161C63762BAC73 /* Embed Pods Frameworks */,
-				041539D0F18EA3647F32BC47 /* Copy Pods Resources */,
+				79A7B7333AD260C21AFBDD61 /* Embed Pods Frameworks */,
+				02D55A9D24B9ACF19E0D68AD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -901,6 +931,7 @@
 				14F446201C0B011800D1FF41 /* CustomPageInfoView.xib in Resources */,
 				14F446061C0B011000D1FF41 /* XHHuabanCollectionCell.xib in Resources */,
 				14F446041C0B011000D1FF41 /* TogetherListCell.xib in Resources */,
+				14644EEB1C3A626300563391 /* SVProgressHUD.bundle in Resources */,
 				14F4460A1C0B011000D1FF41 /* XHUserCollectionCell.xib in Resources */,
 				14F446DE1C0B0D4E00D1FF41 /* error@2x.png in Resources */,
 				14F445A41C0AFFD900D1FF41 /* SystemEmojize.plist in Resources */,
@@ -915,7 +946,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		041539D0F18EA3647F32BC47 /* Copy Pods Resources */ = {
+		02D55A9D24B9ACF19E0D68AD /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -927,10 +958,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuaBanNew/Pods-HuaBanNew-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6C2966E0E6B58FBB6B173362 /* Check Pods Manifest.lock */ = {
+		59F6A7BDFAECB607CCC25118 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -945,7 +976,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D53EA29ECE161C63762BAC73 /* Embed Pods Frameworks */ = {
+		79A7B7333AD260C21AFBDD61 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -957,7 +988,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuaBanNew/Pods-HuaBanNew-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1024,6 +1055,7 @@
 				14F4467C1C0B013500D1FF41 /* Text_Meta.swift in Sources */,
 				14F446381C0B011E00D1FF41 /* FollowRequest.swift in Sources */,
 				14F446521C0B012E00D1FF41 /* MessageViewController.swift in Sources */,
+				14644EED1C3A626300563391 /* SVRadialGradientLayer.m in Sources */,
 				149DDA111C0D50B400B0F87C /* BaseNavgationController.swift in Sources */,
 				14F446811C0B013500D1FF41 /* Hot_Words.swift in Sources */,
 				14F446E21C0B0D4E00D1FF41 /* NormalHeaderExt.swift in Sources */,
@@ -1040,6 +1072,7 @@
 				149DDA511C0E1AF800B0F87C /* FansViewController.swift in Sources */,
 				14F4464E1C0B012E00D1FF41 /* BaseViewController.swift in Sources */,
 				14F446511C0B012E00D1FF41 /* FocusViewController.swift in Sources */,
+				14644EEC1C3A626300563391 /* SVProgressHUD.m in Sources */,
 				14F4461F1C0B011800D1FF41 /* CustomPageInfoView.swift in Sources */,
 				14F446DB1C0B0D4E00D1FF41 /* AlertExt.swift in Sources */,
 				14F446501C0B012E00D1FF41 /* DiscoverViewController.swift in Sources */,
@@ -1077,6 +1110,7 @@
 				1438F9071C0EBAD20000DC77 /* FileManagerExt.swift in Sources */,
 				14F446881C0B013500D1FF41 /* Query.swift in Sources */,
 				14F445BE1C0B003600D1FF41 /* HuaBanGlobal.swift in Sources */,
+				14644EEA1C3A626300563391 /* SVIndefiniteAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1178,7 +1212,7 @@
 		};
 		148EA1CF1C0AC85C00C11A90 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E00CBC242D91157C1C5C99E3 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 8E53552591E7B30270E1565A /* Pods-HuaBanNew.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1209,7 +1243,7 @@
 		};
 		148EA1D01C0AC85C00C11A90 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 756E54A6A6320F73AF52D930 /* Pods.release.xcconfig */;
+			baseConfigurationReference = AB73B94F6D3BAD4FD074482A /* Pods-HuaBanNew.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
