@@ -20,20 +20,6 @@ GitHub：[chengxianghe](https://github.com/chengxianghe)
 <h5>预览图</h5>
 ![image](https://github.com/chengxianghe/watch-gif/blob/master/watch5.gif?raw=true)
 
-- PNG
-<h5>1.首页</h5>
-![iamge](https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.31.08.png?raw=true)
-
-<h5>2.搜索</h5>
-![image](https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.28.53.png?raw=true)
-
-<h5>3.画板详情</h5>
-![image](https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.27.22.png?raw=true)
-
-<h5>4.分类选择</h5>
-![image](https://github.com/chengxianghe/watch-gif/blob/master/Simulator%20Screen%20Shot%202015年12月25日%20上午10.27.09.png?raw=true)
-
-
 #### Opensource libraries used
 
 - [Alamofire](https://github.com/Alamofire/Alamofire)
