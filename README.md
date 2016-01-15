@@ -9,7 +9,7 @@ GitHub：[chengxianghe](https://github.com/chengxianghe)
 ## New features:
 - 1.0 集成了bugTags 可以直接反馈bug;
 
-## Features
+## Features (TODO)
 
 - 实现详情页左右滑动的效果
 - 提高列表的流畅度
