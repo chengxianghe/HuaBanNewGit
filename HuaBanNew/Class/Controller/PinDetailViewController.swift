@@ -33,7 +33,8 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
     var header: PinDetailHeaderView!
     var currentPage: Int = 0
     var imageView: UIImageView!
-    
+    var progressLayer: UIView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -110,11 +111,32 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
         var curentHeight = kScreenWidth / width * height
         
         self.imageView = UIImageView()
-        self.imageView.downloadImage(Url: NSURL(string: Safe.safeString(pin.file?.realKey(ImageType.max))), placeholder: (self.popSelectedView as! UIImageView).image)
         self.imageView.frame = CGRectMake(0, 0, self.view.frame.size.width, curentHeight);
         self.imageView.userInteractionEnabled = true;
         let tap = UITapGestureRecognizer(target: self, action: "tapImage:")
         self.imageView.addGestureRecognizer(tap)
+        
+        // 进度条
+        let lineHeight: CGFloat = 4
+        let progressLayer = UIView()
+        progressLayer.frame = CGRectMake(0, 0, self.imageView.frame.size.width, lineHeight);
+        progressLayer.backgroundColor = UIColor.redColor();
+        progressLayer.hidden = true;
+        self.imageView.addSubview(progressLayer);
+        self.progressLayer = progressLayer;
+
+        self.imageView.downloadImageProgress(Url: NSURL(string: Safe.safeString(pin.file?.realKey(ImageType.max))), placeholder: (self.popSelectedView as! UIImageView).image, progress: {[weak self] (receivedSize, totalSize, progress) -> () in
+            if (self?.progressLayer != nil && self!.progressLayer!.hidden) {
+                self?.progressLayer?.hidden = false;
+            }
+            if (progress >= 0 && progress <= 1) {
+                self?.progressLayer?.frame = CGRectMake(0, 0, self!.imageView.frame.width * progress, lineHeight);
+            }
+            }, success: {[weak self] (imageURL, image) -> () in
+                self?.progressLayer?.hidden = true;
+            }) {[weak self] (error) -> () in
+                self?.progressLayer?.hidden = true;
+        }
         
         var textH: CGFloat = 0
         if pin.raw_text?.length > 0 {

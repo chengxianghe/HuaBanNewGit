@@ -29,19 +29,26 @@ extension UIImageView {
         }
         
         self.sd_setImageWithURL(url!, placeholderImage: place, options: SDWebImageOptions.LowPriority, progress: { (receivedSize, totalSize) -> Void in
-            if totalSize < 0 {
-                progress?(receivedSize: receivedSize, totalSize: -totalSize, progress: -CGFloat(receivedSize)/CGFloat(totalSize))
-            } else {
-                progress?(receivedSize: receivedSize, totalSize: totalSize, progress: CGFloat(receivedSize)/CGFloat(totalSize))
-            }
-            }) { (image, error, cacheType, imageURL) -> Void in
-                if (error != nil) {
-                    failure?(error: error!);
-                }else{
-                    self.image = image;
-                    success?(imageURL: imageURL!,image: image!);
+            dispatch_async(dispatch_get_main_queue(), {
+                if totalSize < 0 {
+                    progress?(receivedSize: receivedSize, totalSize: -totalSize, progress: -CGFloat(receivedSize)/CGFloat(totalSize))
+                } else {
+                    progress?(receivedSize: receivedSize, totalSize: totalSize, progress: CGFloat(receivedSize)/CGFloat(totalSize))
                 }
-
+                
+            })
+            
+            }) { (image, error, cacheType, imageURL) -> Void in
+                dispatch_async(dispatch_get_main_queue(), {
+                    
+                    if (error != nil) {
+                        failure?(error: error!);
+                    }else{
+                        self.image = image;
+                        success?(imageURL: imageURL!,image: image!);
+                    }
+                })
+                
         }
         
     }
