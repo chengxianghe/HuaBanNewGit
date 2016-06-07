@@ -1,6 +1,5 @@
 #import <UIKit/UIKit.h>
 
-#import "MJDictionaryCache.h"
 #import "MJExtension.h"
 #import "MJExtensionConst.h"
 #import "MJFoundation.h"

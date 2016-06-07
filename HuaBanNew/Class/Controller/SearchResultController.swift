@@ -215,13 +215,13 @@ class SearchResultController: BaseViewController,UICollectionViewDelegate,UIColl
                 
             } else {
                 self.collectionView.mj_footer.state = MJRefreshState.NoMoreData
-                self.requestBoards.page--
+                self.requestBoards.page -= 1
             }
             
             }) {[unowned self] (baseRequest, err) -> Void in
                 self.showError("加载失败")
                 print(err)
-                self.requestBoards.page--
+                self.requestBoards.page -= 1
                 
         }
         
@@ -231,7 +231,7 @@ class SearchResultController: BaseViewController,UICollectionViewDelegate,UIColl
         if isHeaderRefresh {
             self.requestPins.page = 1
         } else {
-            self.requestPins.page++
+            self.requestPins.page += 1
         }
         self.requestPins.searchStr = searchStr
         
@@ -248,13 +248,13 @@ class SearchResultController: BaseViewController,UICollectionViewDelegate,UIColl
                 self.pinDataSource.appendContentsOf(self.requestPins.pins!)
             } else {
                 self.collectionView.mj_footer.state = MJRefreshState.NoMoreData
-                self.requestPins.page--
+                self.requestPins.page -= 1
             }
             
             }) {[unowned self] (baseRequest, err) -> Void in
                 self.showError("加载失败")
                 print(err.localizedDescription)
-                self.requestPins.page--
+                self.requestPins.page -= 1
                 
         }
     }
@@ -279,14 +279,14 @@ class SearchResultController: BaseViewController,UICollectionViewDelegate,UIColl
                 self.userDataSource.appendContentsOf(self.requestUsers.users!)
             } else {
                 self.collectionView.mj_footer.state = MJRefreshState.NoMoreData
-                self.requestUsers.page--
+                self.requestUsers.page -= 1
             }
             
             }) {[unowned self] (baseRequest, err) -> Void in
                 self.showError("加载失败")
                 print(err)
                 
-                self.requestUsers.page--
+                self.requestUsers.page -= 1
         }
     }
     

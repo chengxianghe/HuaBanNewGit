@@ -57,7 +57,7 @@ class TogetherViewController: BaseViewController,UITableViewDataSource,UITableVi
         let tableHeight:CGFloat = self.tableView.bounds.size.height
         let cells:NSArray = self.tableView.visibleCells
         
-        for var a = 0;a < cells.count; a++ {
+        for a in 0 ..< cells.count {
             let cell:UITableViewCell = cells.objectAtIndex(a) as! UITableViewCell
             if(cell.isKindOfClass(UITableViewCell)){
                 cell.transform = CGAffineTransformMakeTranslation(0, tableHeight)

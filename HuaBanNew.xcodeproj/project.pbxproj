@@ -677,17 +677,17 @@
 		14F4465A1C0B013500D1FF41 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				14F4465D1C0B013500D1FF41 /* Category */,
+				14F446691C0B013500D1FF41 /* PinDetail */,
+				14F4466F1C0B013500D1FF41 /* Search */,
 				14F4465B1C0B013500D1FF41 /* Banners.swift */,
 				14F4465C1C0B013500D1FF41 /* BaseModel.swift */,
-				14F4465D1C0B013500D1FF41 /* Category */,
 				14F446651C0B013500D1FF41 /* CategoryModel.swift */,
 				14F446661C0B013500D1FF41 /* Cover.swift */,
 				14F446671C0B013500D1FF41 /* Explores.swift */,
 				14F446681C0B013500D1FF41 /* Hot_Words.swift */,
-				14F446691C0B013500D1FF41 /* PinDetail */,
 				14F4466D1C0B013500D1FF41 /* Post.swift */,
 				14F4466E1C0B013500D1FF41 /* Recommends.swift */,
-				14F4466F1C0B013500D1FF41 /* Search */,
 				14F446731C0B013500D1FF41 /* Tags.swift */,
 				14F446741C0B013500D1FF41 /* Topic.swift */,
 			);

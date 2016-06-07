@@ -266,9 +266,9 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
         
         
         // 搜索
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "setting_pressed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: "onSetting")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "setting_pressed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MineViewController.onSetting))
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "tabAdd_pressed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: "onTabAdd")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "tabAdd_pressed")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MineViewController.onTabAdd))
         
         
     }
@@ -303,7 +303,7 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
             self.requestBoards.max = nil
         } else {
             self.requestBoards.max = self.boardDataSource.last?.board_id
-            self.requestBoards.page++
+            self.requestBoards.page += 1
         }
         
         requestBoards.requestWithRequestOption(.RefreshPriority, sucess: {[unowned self] (baseRequest) -> Void in
@@ -317,13 +317,13 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
                 self.boardDataSource.appendContentsOf(self.requestBoards.boards!)
                 
             } else {
-                self.requestBoards.page--
+                self.requestBoards.page -= 1
                 self.collectionView.mj_footer.state = MJRefreshState.NoMoreData;
             }
             
             }) {[unowned self] (baseRequest, err) -> Void in
                 self.showError("加载失败")
-                self.requestBoards.page--
+                self.requestBoards.page -= 1
                 print(err)
         }
         
@@ -337,7 +337,7 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
             self.requestPins.max = nil
         } else {
             self.requestPins.max = self.pinDataSource.last?.pin_id
-            self.requestPins.page++
+            self.requestPins.page += 1
         }
         
         requestPins.requestWithRequestOption(.RefreshPriority, sucess: {[unowned self] (baseRequest) -> Void in
@@ -351,13 +351,13 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
                 
                 
             } else {
-                self.requestPins.page--
+                self.requestPins.page -= 1
                 self.collectionView.mj_footer.state = MJRefreshState.NoMoreData;
             }
             
             }) {[unowned self] (baseRequest, err) -> Void in
                 self.showError("加载失败")
-                self.requestPins.page--
+                self.requestPins.page -= 1
                 print(err)
         }
         
@@ -371,7 +371,7 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
             self.requestLikes.max = nil
         } else {
             self.requestLikes.max = self.likeDataSource.last?.seq
-            self.requestLikes.page++
+            self.requestLikes.page += 1
         }
         
         requestLikes.requestWithRequestOption(.RefreshPriority, sucess: {[unowned self] (baseRequest) -> Void in
@@ -383,13 +383,13 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
                 self.likeDataSource.appendContentsOf(self.requestLikes.likes!)
                 
             } else {
-                self.requestLikes.page--
+                self.requestLikes.page -= 1
                 self.collectionView.mj_footer.state = MJRefreshState.NoMoreData;
             }
             
             }) {[unowned self] (baseRequest, err) -> Void in
                 self.showError("加载失败")
-                self.requestLikes.page--
+                self.requestLikes.page -= 1
                 print(err)
         }
         
@@ -403,7 +403,7 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
             self.requestSays.max = nil
         } else {
             self.requestSays.max = self.sayDataSource.last?.post_id
-            self.requestSays.page++
+            self.requestSays.page += 1
         }
         
         
@@ -416,13 +416,13 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
                 self.sayDataSource.appendContentsOf(self.requestSays.says!)
                 
             } else {
-                self.requestSays.page--
+                self.requestSays.page -= 1
                 self.collectionView.mj_footer.state = MJRefreshState.NoMoreData;
             }
             
             }) {[unowned self] (baseRequest, err) -> Void in
                 self.showError("加载失败")
-                self.requestSays.page--
+                self.requestSays.page -= 1
                 print(err)
         }
         

@@ -109,7 +109,7 @@ class BoardDetailViewController: BaseViewController,UICollectionViewDelegate,UIC
     func configNav() {
         
         // 搜索
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "关注", style: UIBarButtonItemStyle.Plain, target: self, action: "onFollow:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "关注", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(BoardDetailViewController.onFollow(_:)))
     }
     
     func onFollow(sender: UIBarButtonItem) {

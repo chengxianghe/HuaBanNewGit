@@ -49,8 +49,8 @@ extension NSDate {
     }
     
     //MARK: - 从字符串或者NSNumber得到NSDate
-    static func dateFromStringOrNumber(var dateString: AnyObject) -> NSDate
-    {
+    static func dateFromStringOrNumber(dateString: AnyObject) -> NSDate {
+        var dateString = dateString
         if let dateNum = dateString as? NSNumber {
             dateString = dateNum.stringValue
         }

@@ -23,7 +23,7 @@ class XHUserCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.followBtn.addTarget(self, action: "onFollowBtnClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.followBtn.addTarget(self, action: #selector(XHUserCollectionCell.onFollowBtnClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
 
     }
     

@@ -113,7 +113,7 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
         self.imageView = UIImageView()
         self.imageView.frame = CGRectMake(0, 0, self.view.frame.size.width, curentHeight);
         self.imageView.userInteractionEnabled = true;
-        let tap = UITapGestureRecognizer(target: self, action: "tapImage:")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(PinDetailViewController.tapImage(_:)))
         self.imageView.addGestureRecognizer(tap)
         
         // 进度条
@@ -202,12 +202,12 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
         likeBtn.setImage(UIImage(named: "ic_navibar_like")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState: UIControlState.Normal)
         likeBtn.setImage(UIImage(named: "ic_navibar_liked")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState: UIControlState.Selected)
         
-        likeBtn.addTarget(self, action: "onLike:", forControlEvents: UIControlEvents.TouchUpInside)
+        likeBtn.addTarget(self, action: #selector(PinDetailViewController.onLike(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         let item1 = UIBarButtonItem(customView: likeBtn)
         
-        let item2 = UIBarButtonItem(image: UIImage(named: "ic_navibar_download")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: "onSearch:")
+        let item2 = UIBarButtonItem(image: UIImage(named: "ic_navibar_download")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(PinDetailViewController.onSearch(_:)))
         
-        let item3 = UIBarButtonItem(image: UIImage(named: "btn_pin")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: "onSearch:")
+        let item3 = UIBarButtonItem(image: UIImage(named: "btn_pin")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(PinDetailViewController.onSearch(_:)))
         
         self.navigationItem.rightBarButtonItems = [item3, item2, item1]
     }

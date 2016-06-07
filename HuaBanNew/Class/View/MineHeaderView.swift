@@ -87,7 +87,7 @@ class MineHeaderView: UIView,UIScrollViewDelegate {
         fansLabel.textColor = UIColor.whiteColor()
         fansLabel.backgroundColor = UIColor(white: 0.8, alpha: 0.4)
       
-        let tap = UITapGestureRecognizer(target: self, action: "onFanslabel")
+        let tap = UITapGestureRecognizer(target: self, action:#selector(MineHeaderView.onFanslabel))
         fansLabel.addGestureRecognizer(tap)
         fansLabel.userInteractionEnabled = true
         self.scrollView.addSubview(fansLabel)

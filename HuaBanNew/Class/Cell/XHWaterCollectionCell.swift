@@ -35,7 +35,7 @@ class XHWaterCollectionCell: UICollectionViewCell {
         // Initialization code
         self.contentView.backgroundColor = UIColor.whiteColor()
         
-        let tap = UITapGestureRecognizer(target: self, action: "tapUserView")
+        let tap = UITapGestureRecognizer(target: self, action:#selector(XHWaterCollectionCell.tapUserView))
         self.userView.addGestureRecognizer(tap)
     }
     

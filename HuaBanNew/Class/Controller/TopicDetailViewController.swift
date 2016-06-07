@@ -105,7 +105,7 @@ class TopicDetailViewController: BaseViewController,UICollectionViewDelegate,UIC
                 }
                 self.sayDataSource.appendContentsOf(self.requestTopicDetail.posts!)
                 
-                self.currentPage++
+                self.currentPage += 1
                 
                 if self.requestTopicDetail.posts?.count < 20 {
                     self.collectionView.mj_footer.endRefreshingWithNoMoreData()

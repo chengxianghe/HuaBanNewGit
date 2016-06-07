@@ -123,8 +123,8 @@ class XHCategoryTableView: UITableView,UITableViewDataSource,UITableViewDelegate
                 
                 cell.titleLabel.text = self.hasRecordCategorys[indexPath.row]["name"] as? String
                 cell.detailBtn.tag = indexPath.row
-                cell.detailBtn.removeTarget(self, action: "deleteRecordCell:", forControlEvents: UIControlEvents.TouchUpInside)
-                cell.detailBtn.addTarget(self, action: "deleteRecordCell:", forControlEvents: UIControlEvents.TouchUpInside)
+                cell.detailBtn.removeTarget(self, action: #selector(XHCategoryTableView.deleteRecordCell(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+                cell.detailBtn.addTarget(self, action: #selector(XHCategoryTableView.deleteRecordCell(_:)), forControlEvents: UIControlEvents.TouchUpInside)
                 
                 return cell
             } else {

@@ -31,7 +31,7 @@ class HBSayCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        let tap = UITapGestureRecognizer(target: self, action: "tapImage:")
+        let tap = UITapGestureRecognizer(target: self, action:#selector(HBSayCollectionViewCell.tapImage(_:)))
         self.photoImageView.removeGestureRecognizer(tap)
         self.photoImageView.addGestureRecognizer(tap)
         self.photoImageView.userInteractionEnabled = true

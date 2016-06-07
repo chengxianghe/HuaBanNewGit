@@ -197,7 +197,7 @@ class DiscoverViewController: BaseViewController,UISearchBarDelegate,UISearchDis
         
         let titleView = UIView(frame: CGRectMake(0, 0, 200, 50))
         
-        let tap = UITapGestureRecognizer(target: self, action: "onDiscoverBtnClick")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(DiscoverViewController.onDiscoverBtnClick))
         titleView.addGestureRecognizer(tap)
         
         //frame: CGRectMake(0, 10, 80, 30)
@@ -228,7 +228,7 @@ class DiscoverViewController: BaseViewController,UISearchBarDelegate,UISearchDis
         self.navigationItem.titleView = titleView
         
         // 搜索
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: "onSearch")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(DiscoverViewController.onSearch))
     }
     
     

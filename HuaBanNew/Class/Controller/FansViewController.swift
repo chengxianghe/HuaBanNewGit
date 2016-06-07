@@ -148,7 +148,7 @@ class FansViewController: BaseViewController,UICollectionViewDelegate,UICollecti
         if isHeadRefresh {
             self.fansRequest.page = 1
         } else {
-            self.fansRequest.page++
+            self.fansRequest.page += 1
         }
         
         self.fansRequest.urlname = self.urlname!
@@ -172,7 +172,7 @@ class FansViewController: BaseViewController,UICollectionViewDelegate,UICollecti
                 self.collectionView.mj_footer.endRefreshing()
             } else {
                 self.collectionView.mj_footer.endRefreshingWithNoMoreData()
-                self.fansRequest.page--
+                self.fansRequest.page -= 1
             }
             
             }) {[unowned self] (baseRequest, err) -> Void in
@@ -180,7 +180,7 @@ class FansViewController: BaseViewController,UICollectionViewDelegate,UICollecti
                 print(err)
                 self.collectionView.mj_header.endRefreshing()
                 self.collectionView.mj_footer.endRefreshing()
-                self.fansRequest.page--
+                self.fansRequest.page -= 1
                 
         }
         
@@ -190,7 +190,7 @@ class FansViewController: BaseViewController,UICollectionViewDelegate,UICollecti
         if isHeadRefresh {
             self.followRequest.page = 1
         } else {
-            self.followRequest.page++
+            self.followRequest.page += 1
         }
         self.followRequest.urlname = urlname
         
@@ -215,7 +215,7 @@ class FansViewController: BaseViewController,UICollectionViewDelegate,UICollecti
                 self.collectionView.mj_footer.endRefreshing()
             } else {
                 self.collectionView.mj_footer.endRefreshingWithNoMoreData()
-                self.followRequest.page--
+                self.followRequest.page -= 1
 
             }
             }) {[unowned self] (baseRequest, err) -> Void in
@@ -223,7 +223,7 @@ class FansViewController: BaseViewController,UICollectionViewDelegate,UICollecti
                 print(err.localizedDescription)
                 self.collectionView.mj_header.endRefreshing()
                 self.collectionView.mj_footer.endRefreshing()
-                self.followRequest.page--
+                self.followRequest.page -= 1
                 
         }
     }

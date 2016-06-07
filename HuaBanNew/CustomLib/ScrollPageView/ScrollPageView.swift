@@ -141,11 +141,11 @@ class ScrollPageView : UIView, UIScrollViewDelegate {
     
     //MARK: - Private Methods
     private func toPlay() {
-        self.performSelector("autoPlayToNextPage", withObject: nil, afterDelay: timeInterval)
+        self.performSelector(#selector(ScrollPageView.autoPlayToNextPage), withObject: nil, afterDelay: timeInterval)
     }
     
     func autoPlayToNextPage() {
-        NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: "autoPlayToNextPage", object: nil)
+        NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: #selector(ScrollPageView.autoPlayToNextPage), object: nil)
         
         let view = self.scrollView.subviews[1]
         
@@ -172,7 +172,7 @@ class ScrollPageView : UIView, UIScrollViewDelegate {
             animations: { () -> Void in
                 self.scrollView.contentOffset = CGPointMake(self.frame.size.width * 2, 0)
             }) { (finish) -> Void in
-                self.performSelector("autoPlayToNextPage", withObject: nil, afterDelay: self.timeInterval)
+                self.performSelector(#selector(ScrollPageView.autoPlayToNextPage), withObject: nil, afterDelay: self.timeInterval)
 
         }
         
@@ -221,7 +221,7 @@ class ScrollPageView : UIView, UIScrollViewDelegate {
         let height = self.frame.size.height;
         
         
-        for (var i = 0; i < 3; i++) {
+        for i in 0 ..< 3 {
             let imageView = UIImageView(frame: CGRectMake(CGFloat(i) * width, 0, width, height))
             
             imageView.contentMode = UIViewContentMode.ScaleAspectFill;
@@ -238,7 +238,7 @@ class ScrollPageView : UIView, UIScrollViewDelegate {
         scrollView.showsVerticalScrollIndicator = false;
         scrollView.delegate = self;
         
-        let tap = UITapGestureRecognizer(target: self, action: "singleTapped:")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ScrollPageView.singleTapped(_:)))
         scrollView.addGestureRecognizer(tap)
         self.addSubview(scrollView)
     }
@@ -359,7 +359,7 @@ class ScrollPageView : UIView, UIScrollViewDelegate {
         
         // -> 即将展示第3个imageView
         if (x >= 2 * width) {
-            self.currentIndex++;
+            self.currentIndex += 1;
             if (self.currentIndex == self.imagesCount) {
                 self.currentIndex = 0;
             }
@@ -380,7 +380,7 @@ class ScrollPageView : UIView, UIScrollViewDelegate {
                 self.currentIndex = self.imagesCount;
             }
             
-            self.currentIndex--;
+            self.currentIndex -= 1;
             
             if (self.currentIndex == 0) {
                 self.currentIndex = self.imagesCount;
@@ -402,7 +402,7 @@ class ScrollPageView : UIView, UIScrollViewDelegate {
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         
         // 用户开始拖动 取消自动轮播
-        NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: "autoPlayToNextPage", object: nil)
+        NSObject.cancelPreviousPerformRequestsWithTarget(self, selector: #selector(ScrollPageView.autoPlayToNextPage), object: nil)
     }
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
