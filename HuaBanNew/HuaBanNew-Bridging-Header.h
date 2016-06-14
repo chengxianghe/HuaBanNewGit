@@ -26,5 +26,11 @@
 //bug类
 #import <Bugtags/Bugtags.h>
 
+//share
+#import "WeiboSDK.h"
+//#import <WeiboSDK/WeiboSDK.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import "WXApi.h"
 
 #endif

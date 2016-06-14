@@ -78,7 +78,7 @@ class XHSaveHelper {
     }
     
     static func cachePathUserId() -> String {
-        return AppUser.defaultUser.user_id.stringValue
+        return AppUser.defaultUser().user_id.stringValue
     }
     
     static func cachePathForRequest(request: BaseRequest) -> String {

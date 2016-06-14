@@ -11,4 +11,5 @@ target "HuaBanNew" do
 	pod 'CHTCollectionViewWaterfallLayout'
 	pod 'MJExtension'
 	pod 'Bugtags'
+    pod "FDStackView", "1.0-alpha"
 end

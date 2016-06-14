@@ -43,8 +43,6 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
         
         // 网络请求
         self.setupNetWork()
-        
-        // Do any additional setup after loading the view.
     }
     
     func tapImage(sender: UIView) {
@@ -98,10 +96,9 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
         self.collectionView.registerNib(UINib(nibName: "XHWaterCollectionCell", bundle: NSBundle.mainBundle()), forCellWithReuseIdentifier: "XHWaterCollectionCell")
         self.collectionView.backgroundColor = UIColor.groupTableViewBackgroundColor()
         
-        self.setupHeader()
-        
         self.configNav()
-        
+
+        self.setupHeader()
     }
     
     func setupHeader() {
@@ -134,6 +131,7 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
             }
             }, success: {[weak self] (imageURL, image) -> () in
                 self?.progressLayer?.hidden = true;
+                self?.navigationItem.rightBarButtonItems![1].enabled = true;
             }) {[weak self] (error) -> () in
                 self?.progressLayer?.hidden = true;
         }
@@ -158,6 +156,8 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
                 let vc = BoardDetailViewController()
                 vc.board = model.board
                 self?.navigationController?.pushViewController(vc, animated: true)
+            case 4: // share
+                self?.setShareToThird(model)
             default: //comment
                 print("clickComment:" + "\(model.pin_id)")
             }
@@ -170,21 +170,55 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
         self.collectionView.addSubview(header)
     }
     
-    func setupNetWork() {
+    func setShareToThird(model: Pin) {
         
+        ShareManager.manager().showShareViewWithBlock({ (type) -> () in
+            if type == nil {
+                return;
+            }
+            let title = "\(model.user == nil ? "花瓣" : model.user!.username)的分享";
+            let url = model.source == nil ? "www.huaban.com" : model.source!;
+            let imageUrl = model.file!.realKey(ImageType.big);
+            let describ = model.raw_text == nil ? "" : model.raw_text!;
+            let image = self.imageView.image
+            
+            switch (type!) {
+            case .WeiBoShare:
+                print("分享到新浪微博");
+                SinaShareHelp.currentHelp().shareText(title, shareImage: image, url: url)
+            case .WeiXinFriendsShare:
+                print("分享到朋友圈");
+                //    weixin
+                WeiXinShareHelp.currentHelp().sendLinkURL(url, title: title, description: describ, thumbImage: image, InScene: WXSceneTimeline)
+            case .WeiXinShare:
+                print("分享到微信好友");
+                WeiXinShareHelp.currentHelp().sendImageData(image, InScene: WXSceneSession)
+            case .WeiXinFavoriteShare:
+                print("分享到微信收藏");
+                WeiXinShareHelp.currentHelp().sendImageData(image, InScene: WXSceneFavorite)
+            case .QZoneShare:
+                print("分享到QQ空间");
+                QQShareHelp.currentHelp().sendLinkUrlToQZone(title, description: describ, imageUrl: imageUrl, url: url)
+            case .QQShare:
+                print("分享到QQ");
+                QQShareHelp.currentHelp().sendImage(image, title: title, desc: describ)
+            }
+            
+        })
+        
+    }
+    
+    func setupNetWork() {
             self.request.pinId = pin.pin_id
         
             request.requestWithRequestOption(.RefreshPriority, sucess: {[unowned self] (baseRequest) -> Void in
-        
                     if self.request.resultPin != nil {
                         self.header.setInfo(self.request.resultPin!)
                     }
         
                     }) {[unowned self] (baseRequest, err) -> Void in
                         self.showError("加载失败")
-        
                         print(err.localizedDescription)
-        
                 }
         
         self.loadData(1)
@@ -205,7 +239,8 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
         likeBtn.addTarget(self, action: #selector(PinDetailViewController.onLike(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         let item1 = UIBarButtonItem(customView: likeBtn)
         
-        let item2 = UIBarButtonItem(image: UIImage(named: "ic_navibar_download")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(PinDetailViewController.onSearch(_:)))
+        let item2 = UIBarButtonItem(image: UIImage(named: "ic_navibar_download")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(PinDetailViewController.onDownloadImage(_:)))
+        item2.enabled = false
         
         let item3 = UIBarButtonItem(image: UIImage(named: "btn_pin")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(PinDetailViewController.onSearch(_:)))
         
@@ -219,6 +254,39 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
     func onLike(sender: UIButton) {
         sender.selected = !sender.selected
     }
+    
+    func onDownloadImage(sender: UIBarButtonItem) {
+        if self.imageView.image == nil {
+            return
+        }
+        showLoading("正在保存,请稍候...")
+        
+        PhotoAlbumHelper.saveImageInAlbum(self.imageView.image!, albumName: "花瓣") { (result, error) in
+            switch result{
+            case .SUCCESS:
+                self.showSuccess("保存成功!")
+            case .DENIED:
+                self.showMessage("请开启相册权限!")
+            case .ERROR:
+                self.showError("保存失败!")
+                print(error!)
+            }
+        }
+        
+        // ios 7
+//        UIImageWriteToSavedPhotosAlbum(self.imageView.image!, self, #selector(PinDetailViewController.image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    // ios 7
+//    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: AnyObject) {
+//        if error != nil {
+//            self.showError("保存失败!")
+//            print(error!)
+//            return
+//        }
+//
+//        self.showSuccess("保存成功!")
+//    }
     
     func loadData(page: Int){
         
@@ -244,10 +312,8 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
             
             self.currentPage = page
             
-            
             }) {[unowned self] (baseRequest, err) -> Void in
                 self.showError("加载失败")
-                
                 print(err.localizedDescription)
         }
         
@@ -284,8 +350,6 @@ class PinDetailViewController: BaseViewController,UICollectionViewDelegate,UICol
             lastOffsetY = offsetY
         }
     }
-    
-
     
     //MARK: - UICollectionViewDataSource
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {

@@ -144,9 +144,9 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
             self.user = User()
 
             if self.userId == nil {
-                self.user.user_id = AppUser.defaultUser.user_id
-                self.user.urlname = AppUser.defaultUser.urlname
-                self.user.username = AppUser.defaultUser.username
+                self.user.user_id = AppUser.defaultUser().user_id
+                self.user.urlname = AppUser.defaultUser().urlname
+                self.user.username = AppUser.defaultUser().username
                 self.userId = self.user.user_id
             } else {
                 self.user.user_id = self.userId
@@ -157,7 +157,7 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
 
         }
         
-        if self.userId == AppUser.defaultUser.user_id {
+        if self.userId == AppUser.defaultUser().user_id {
             self.isSelf = true
         }
         
@@ -246,7 +246,7 @@ class MineViewController: BaseViewController,UICollectionViewDelegate,UICollecti
                 self.loadData(true)
 
                 if self.isSelf {
-                    AppUser.defaultUser.updateUser(self.requestUser.resultUser!)
+                    AppUser.defaultUser().updateUser(self.requestUser.resultUser!)
                 }
             }
             }) {[unowned self] (baseRequest, err) -> Void in

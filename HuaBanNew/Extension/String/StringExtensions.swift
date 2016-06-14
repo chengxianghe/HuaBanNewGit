@@ -170,7 +170,7 @@ extension String {
      - returns: [NSDate]
      */
     func getDates() -> [NSDate] {
-        let error: NSErrorPointer = NSErrorPointer()
+        let error = NSErrorPointer()
         let detector: NSDataDetector?
         do {
             detector = try NSDataDetector(types: NSTextCheckingType.Date.rawValue)

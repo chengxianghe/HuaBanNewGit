@@ -16,6 +16,7 @@ class MineHeaderView: UIView,UIScrollViewDelegate {
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var blurView: FXBlurView!
     
     var iconBtn: UIButton!
     var nameLabel: UILabel!
@@ -130,12 +131,17 @@ class MineHeaderView: UIView,UIScrollViewDelegate {
         
         self.bgImageView.downloadImage(Url: NSURL(string: model.avatar as! String), placeholder: nil, success: { (imageURL, image) -> () in
             self.bgImageView.image = image.blurredImageWithRadius(10, iterations: 2, tintColor:nil)
+            self.blurView.updateAsynchronously(true, completion: {
+                let animation = CATransition()
+                animation.duration = 0.5
+                animation.type = kCATransitionFade
+                animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+                animation.removedOnCompletion = true
+                self.blurView.layer.addAnimation(animation, forKey: nil)
+            })
+
             self.iconBtn.setImage(image, forState: .Normal)
             }, failure: nil)
-        
-        
-//        self.iconBtn.downloadImage(Url: NSURL(string: model.avatar as! String), forState: .Normal)
-
         
         nameLabel.text  = model.username
         fansLabel.text  = "\(model.follower_count.intValue)粉丝 \(model.following_count.intValue)关注"

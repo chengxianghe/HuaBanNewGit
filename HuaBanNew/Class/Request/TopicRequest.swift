@@ -10,7 +10,6 @@ import UIKit
 
 //MARK: - TopicRequest 话题部分
 class TopicRequest: BaseRequest {
-    var page: Int = 1
     var topics: [Topic]?
     
     override func requestMethod() -> BaseRequestMethod {

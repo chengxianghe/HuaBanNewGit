@@ -54,7 +54,7 @@ class XHHuabanCollectionCell: UICollectionViewCell {
     func setInfo(model: Board, editBtnClick:EditActionClosure) {
         self.closuer = editBtnClick;
         self.setInfo(model)
-        self.editBtn.hidden = model.user_id != AppUser.defaultUser.user_id
+        self.editBtn.hidden = model.user_id != AppUser.defaultUser().user_id
 
     }
 

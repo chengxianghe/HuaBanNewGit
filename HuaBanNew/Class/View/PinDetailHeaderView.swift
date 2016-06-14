@@ -14,9 +14,10 @@ class PinDetailHeaderView: UIView {
 
     var model: Pin?
 //    @IBOutlet weak var descLabel: UILabel!
-    @IBOutlet weak var likeCountLabel: UILabel!
-    @IBOutlet weak var commentCountLabel: UILabel!
-    @IBOutlet weak var repinCountLabel: UILabel!
+    @IBOutlet weak var repinCountButton: UIButton!
+    @IBOutlet weak var likeCountButton: UIButton!
+    @IBOutlet weak var commentCountButton: UIButton!
+
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var boardNameLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -30,7 +31,6 @@ class PinDetailHeaderView: UIView {
 //    @IBOutlet weak var photoImageView: UIImageView!
     
     @IBOutlet weak var textField: UITextField!
-//    @IBOutlet weak var photohightConstraint: NSLayoutConstraint!
     
     private var tapClosure: PinHeaderViewActionClosure?
 
@@ -52,6 +52,13 @@ class PinDetailHeaderView: UIView {
     }
     
     @IBAction func onClick(sender: UIButton) {
+        /**
+        tag: 0 = source
+        tag: 1 = user
+        tag: 2 = board
+        tag: 3 = textField
+        tag: 4 = share
+        */
         self.tapClosure?(model: self.model!, index: sender.tag)
     }
     
@@ -81,12 +88,29 @@ class PinDetailHeaderView: UIView {
         self.sourceLabel.text = model.source
         
         self.timeLabel.text = NSDate.dateFromStringOrNumber(model.created_at).huaBanTimeDescription()
-        self.likeCountLabel.text = "\(model.like_count)"
-        self.commentCountLabel.text = "\(model.comment_count)"
-        self.repinCountLabel.text = "\(model.repin_count)"
+        
+        if model.repin_count.integerValue > 0 {
+            self.repinCountButton.hidden = false
+            self.repinCountButton.setTitle(" \(model.repin_count)", forState: .Normal)
+        } else {
+            self.repinCountButton.hidden = true
+        }
+        
+        if model.like_count.integerValue > 0 {
+            self.likeCountButton.hidden = false
+            self.likeCountButton.setTitle(" \(model.like_count)", forState: .Normal)
+        } else {
+            self.likeCountButton.hidden = true
+        }
+        
+        if model.comment_count.integerValue > 0 {
+            self.commentCountButton.hidden = false
+            self.commentCountButton.setTitle(" \(model.comment_count)", forState: .Normal)
+        } else {
+            self.commentCountButton.hidden = true
+        }
 
-        self.myIconImageView.downloadImage(Url: NSURL(string: AppUser.defaultUser.avatar))
-
+        self.myIconImageView.downloadImage(Url: NSURL(string: AppUser.defaultUser().avatar))
     }
     
     /*

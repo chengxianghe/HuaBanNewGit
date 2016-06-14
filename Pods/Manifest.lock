@@ -1,32 +1,35 @@
 PODS:
-  - Alamofire (3.4.0)
+  - Alamofire (3.4.1)
   - Bugtags (1.2.6)
   - CHTCollectionViewWaterfallLayout (0.9.4):
     - CHTCollectionViewWaterfallLayout/ObjC (= 0.9.4)
   - CHTCollectionViewWaterfallLayout/ObjC (0.9.4)
+  - FDStackView (1.0-alpha)
   - MJExtension (3.0.10)
-  - MJRefresh (3.1.0)
-  - SDWebImage (3.8.0):
-    - SDWebImage/Core (= 3.8.0)
-  - SDWebImage/Core (3.8.0)
+  - MJRefresh (3.1.1)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
   - SnapKit (0.15.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - Bugtags
   - CHTCollectionViewWaterfallLayout
+  - FDStackView (= 1.0-alpha)
   - MJExtension
   - MJRefresh
   - SDWebImage
   - SnapKit (~> 0.15.0)
 
 SPEC CHECKSUMS:
-  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   Bugtags: 10d4b0c089b34f6e28877e5830218627ebd14dbb
   CHTCollectionViewWaterfallLayout: db74be9135826d285f45ff163fd090e57c99fc50
+  FDStackView: 6abd2cdb128430264d5c6e87277629abad222f20
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
-  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
-  SDWebImage: 7d9fe229266696de91eadf840c77ca15efd4bbd2
+  MJRefresh: 70a47c5543b567cdaf70ead5a6e99ce820652eb9
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
 
 COCOAPODS: 0.39.0

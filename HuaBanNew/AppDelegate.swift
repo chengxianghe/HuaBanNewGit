@@ -9,12 +9,12 @@
 import UIKit
 import SDWebImage
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
+    var tencentOAuth: TencentOAuth!
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabVC.selectedIndex = 1
         
         self.configSDWebImage()
-                
+        self.configThirdLoginAndShare()
         self.configThirdBugRecored()
         
         return true
@@ -42,9 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 item.selectedImage = item.selectedImage?.imageWithRenderingMode(.AlwaysOriginal)
             }
         }
-        
         //        tab.translucent = false
-        
     }
     
     func configNavBar() {
@@ -69,7 +67,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: - 第三方bug反馈和crash上报
     func configThirdBugRecored() {
         //BugTags
-        Bugtags.startWithAppKey(kBugAppKey, invocationEvent: BTGInvocationEventBubble)
+        Bugtags.startWithAppKey(kBugAppKey, invocationEvent: BTGInvocationEventShake)
+    }
+    
+    //MARK: - 第三方登录－分享
+    func configThirdLoginAndShare() {
+        
+        //注册微信api
+        WXApi.registerApp(kWeiXinAppID)
+        
+        //新浪微博注册
+        WeiboSDK.enableDebugMode(true)
+        WeiboSDK.registerApp(kWeiBoAppKey)
+        
+        //QQ
+        self.tencentOAuth = TencentOAuth(appId: kQQAppID, andDelegate: nil)
+        self.tencentOAuth.redirectURI = kQQRedirectURI;
+    }
+    
+    
+    // 打开第三方应用
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        
+        //        let QQ = "tencent1104929797://response_from_qq?error_description=dGhlIHVzZXIgZ2l2ZSB1cCB0aGUgY3VycmVudCBvcGVyYXRpb24=&source=qq&source_scheme=mqqapi&error=-4&version=1"
+        // let WeiBo = "wb1511606524://response?id=DA7C7270-25A9-4357-8736-721BECDC4FE7&sdkversion=2.5"
+        
+        return
+            TencentOAuth.HandleOpenURL(url) ||
+                WXApi.handleOpenURL(url, delegate: WeiXinshareDelegate.currenWeiXinshareDelegate) ||
+                WeiboSDK.handleOpenURL(url, delegate:SinaShareDelegate.currenSinaShareDelegate)
+        
+    }
+    
+    // 第三方应用的回调
+    // 两个方法都存在的时候 优先调用 openURL: sourceApplication:annotation:
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        
+        QQApiInterface.handleOpenURL(url, delegate: QQShareDelegate.currenQQshareDelegate)
+        
+        return
+            TencentOAuth.HandleOpenURL(url) ||
+                WXApi.handleOpenURL(url, delegate: WeiXinshareDelegate.currenWeiXinshareDelegate) ||
+                WeiboSDK.handleOpenURL(url, delegate:SinaShareDelegate.currenSinaShareDelegate)
     }
     
     func applicationWillResignActive(application: UIApplication) {

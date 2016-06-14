@@ -29,7 +29,7 @@ class FollowingPinRequest: BaseRequest {
     
     override func requestParameters() -> [String : String]? {
         
-        return ["username" : AppUser.defaultUser.urlname]
+        return ["username" : AppUser.defaultUser().urlname]
     }
     
     override func handleResult() {
@@ -128,7 +128,7 @@ class FollowBoardRequest: BaseRequest {
     
     override func requestUrl() -> String? {
         // http://api.huaban.com/zpalzqleic/following/boards 首页 用户关注的画板
-        return baseUrl + "/\(AppUser.defaultUser.urlname)/\(AppURL.FollowType.followBoards.rawValue)"
+        return baseUrl + "/\(AppUser.defaultUser().urlname)/\(AppURL.FollowType.followBoards.rawValue)"
     }
     
     override func requestParameters() -> [String : String]? {
@@ -174,7 +174,7 @@ class FollowExploreRequest: BaseRequest {
     
     override func requestUrl() -> String? {
         // http://api.huaban.com/zpalzqleic/following/explores 首页 用户关注的画板
-        return baseUrl + "/\(AppUser.defaultUser.urlname)/\(AppURL.FollowType.followExplores.rawValue)"
+        return baseUrl + "/\(AppUser.defaultUser().urlname)/\(AppURL.FollowType.followExplores.rawValue)"
     }
     
     override func requestParameters() -> [String : String]? {

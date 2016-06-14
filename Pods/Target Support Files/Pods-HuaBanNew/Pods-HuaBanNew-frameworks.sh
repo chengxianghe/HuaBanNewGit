@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-HuaBanNew/Alamofire.framework"
   install_framework "Pods-HuaBanNew/CHTCollectionViewWaterfallLayout.framework"
+  install_framework "Pods-HuaBanNew/FDStackView.framework"
   install_framework "Pods-HuaBanNew/MJExtension.framework"
   install_framework "Pods-HuaBanNew/MJRefresh.framework"
   install_framework "Pods-HuaBanNew/SDWebImage.framework"
@@ -94,6 +95,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-HuaBanNew/Alamofire.framework"
   install_framework "Pods-HuaBanNew/CHTCollectionViewWaterfallLayout.framework"
+  install_framework "Pods-HuaBanNew/FDStackView.framework"
   install_framework "Pods-HuaBanNew/MJExtension.framework"
   install_framework "Pods-HuaBanNew/MJRefresh.framework"
   install_framework "Pods-HuaBanNew/SDWebImage.framework"

@@ -16,12 +16,11 @@ class TogetherViewController: BaseViewController,UITableViewDataSource,UITableVi
     
     let cellId = "TogetherListCell"
     let headId = "TogetherHeader"
-    var currentPage = 0
     
     var requestTopic = TopicRequest()
     var topicDataSource = [Topic]() {
         didSet {
-            self.startAnimate()
+            self.startAnimate();
         }
     }
 
@@ -46,7 +45,8 @@ class TogetherViewController: BaseViewController,UITableViewDataSource,UITableVi
     func setupUI() {
         tableView.sectionHeaderHeight = 35
         tableView.registerNib(UINib(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
-        tableView.registerClass(UITableViewHeaderFooterView.classForCoder(), forHeaderFooterViewReuseIdentifier: headId)        
+        tableView.registerClass(UITableViewHeaderFooterView.classForCoder(), forHeaderFooterViewReuseIdentifier: headId)
+        tableView.alpha = 0
     }
     
     func startAnimate() {
@@ -83,50 +83,31 @@ class TogetherViewController: BaseViewController,UITableViewDataSource,UITableVi
     func setupNetWork() {
         self.loadData(1)
 
-        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {[weak self] () -> Void in
+        let header = MJRefreshNormalHeader(refreshingBlock: {[weak self] () -> Void in
             self?.loadData(1)
             })
         
-        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: {[weak self] () -> Void in
-            self?.loadData(self!.currentPage + 1)
-            
-            })
-        
-        self.tableView.mj_footer.automaticallyHidden = false;
+        header.lastUpdatedTimeLabel.hidden = true
 
+        tableView.mj_header = header
+        
         
     }
     
     func loadData(page: Int){
-        
-        self.requestTopic.page = page
         requestTopic.requestWithRequestOption(.RefreshPriority, sucess: {[unowned self] (baseRequest) -> Void in
-
             if self.requestTopic.topics != nil {
-                if page == 1 {
-                    self.topicDataSource.removeAll()
-                }
+                self.topicDataSource.removeAll()
                 self.topicDataSource.appendContentsOf(self.requestTopic.topics!)
-                
-                self.currentPage = page
-                
-                if self.requestTopic.topics?.count < 20 {
-                    self.tableView.mj_footer.endRefreshingWithNoMoreData()
-                } else {
-                    self.tableView.mj_footer.endRefreshing()
-                }
                 self.tableView.mj_header.endRefreshing()
             }
-            
-            }) {[unowned self] (baseRequest, err) -> Void in
-                self.showError("加载失败")
-                print(err)
-                self.tableView.mj_header.endRefreshing()
-                self.tableView.mj_footer.endRefreshing()
+        }) {[unowned self] (baseRequest, err) -> Void in
+            self.showError("加载失败")
+            print(err)
+            self.tableView.mj_header.endRefreshing()
         }
         
     }
-
     
     // MARK: - UITableViewDataSource
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -44,19 +44,10 @@ class AppUser : NSObject
     override init() {
         super.init()
     }
-    
-    class var defaultUser: AppUser {
-        struct Static {
-            static var onceToken: dispatch_once_t = 0
-            static var instance: AppUser? = nil
-        }
-        dispatch_once(&Static.onceToken) {
-            Static.instance = AppUser()
-            //            if let dict = XHSaveHelper.getAnyObjectForKey("DefaultUser") {
-            //                Static.instance?.mj_setKeyValues(dict)
-            //            }
-        }
-        return Static.instance!
+        
+    static let instance = AppUser()
+    class func defaultUser() -> AppUser {
+        return instance
     }
     
     func updateUser(model: User) {

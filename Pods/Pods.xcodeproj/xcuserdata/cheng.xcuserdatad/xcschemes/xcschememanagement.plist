@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FDStackView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>41CBBC7ADE426C15CC8D90AB8D545E93</key>
+		<key>14248A738748E162BF0BD0B8E70D4F1A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>19C0DF4E1691836C9627E3B0BB3144CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3986DFE6A6E577F4191F8D470202F26A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A90331848B9F12432BB12F945F81932</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>7C0126D717EB28DC6DB2EEA2E20B5172</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>81E93FB2FC45803B5196B0121959406A</key>
+		<key>B4DAA0B921BDB6A322DCC676BB34A022</key>
 		<dict>
 			<key>primary</key>
 			<true/>
