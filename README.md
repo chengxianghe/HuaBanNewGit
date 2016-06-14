@@ -7,6 +7,8 @@
 
 GitHub：[chengxianghe](https://github.com/chengxianghe) 
 
+###有什么问题请issue我
+
 ## Version 1.1:
 - 加入了三方分享 微信,QQ,微博
 - 加入图片保存到相册
