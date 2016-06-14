@@ -25,8 +25,12 @@ GitHub：[chengxianghe](https://github.com/chengxianghe)
 ## Screenshots
 
 - GIF
-<h5>预览图</h5>
+
+####总体预览图
 ![image](https://github.com/chengxianghe/watch-gif/blob/master/watch5.gif?raw=true)
+
+####搜索预览图
+![image](https://github.com/chengxianghe/watch-gif/blob/master/HuaBan3.gif?raw=true)
 
 #### Opensource libraries used
 
