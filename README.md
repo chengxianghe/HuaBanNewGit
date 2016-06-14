@@ -7,8 +7,15 @@
 
 GitHub：[chengxianghe](https://github.com/chengxianghe) 
 
-## New features:
-- 1.0 集成了bugTags 可以直接反馈bug;
+## Version 1.1:
+- 加入了三方分享 微信,QQ,微博
+- 加入图片保存到相册
+- bugTags 设置成摇晃启动,默认隐藏
+- 修复部分bug
+
+## Version 1.0:
+- 完成项目基本框架
+- 集成了bugTags 可以直接反馈bug;
 
 ## Features (TODO)
 
