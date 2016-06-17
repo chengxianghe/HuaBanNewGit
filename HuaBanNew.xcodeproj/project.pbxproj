@@ -33,6 +33,9 @@
 		1438F9031C0EBA840000DC77 /* PathExtensionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438F9001C0EBA840000DC77 /* PathExtensionFile.swift */; };
 		1438F9051C0EBA960000DC77 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438F9041C0EBA960000DC77 /* Result.swift */; };
 		1438F9071C0EBAD20000DC77 /* FileManagerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438F9061C0EBAD20000DC77 /* FileManagerExt.swift */; };
+		143986931D13A9B4005AB13C /* WeiXinActivity.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 143986901D13A9B4005AB13C /* WeiXinActivity.bundle */; };
+		143986941D13A9B4005AB13C /* WeiXinActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143986911D13A9B4005AB13C /* WeiXinActivity.strings */; };
+		143986951D13A9B4005AB13C /* WeiXinActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143986921D13A9B4005AB13C /* WeiXinActivity.swift */; };
 		1445EDC21D0EA00F002BBF37 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1445EDC01D0EA00F002BBF37 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		1445EDC31D0EA00F002BBF37 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1445EDC11D0EA00F002BBF37 /* TencentOpenAPI.framework */; };
 		14644EEA1C3A626300563391 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14644EE31C3A626300563391 /* SVIndefiniteAnimatedView.m */; };
@@ -159,6 +162,19 @@
 		7B2923C83A80CC2EE6515365 /* Pods_HuaBanNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A326BEC51D9163FFE0B6F12C /* Pods_HuaBanNew.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		146DF6141D129CE700C9E9B3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		141FBC8E1C151DE000073325 /* BaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		141FBC8F1C151DE000073325 /* CategoryTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableCell.swift; sourceTree = "<group>"; };
@@ -199,6 +215,9 @@
 		1438F9001C0EBA840000DC77 /* PathExtensionFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathExtensionFile.swift; sourceTree = "<group>"; };
 		1438F9041C0EBA960000DC77 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		1438F9061C0EBAD20000DC77 /* FileManagerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerExt.swift; sourceTree = "<group>"; };
+		143986901D13A9B4005AB13C /* WeiXinActivity.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiXinActivity.bundle; sourceTree = "<group>"; };
+		143986911D13A9B4005AB13C /* WeiXinActivity.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = WeiXinActivity.strings; sourceTree = "<group>"; };
+		143986921D13A9B4005AB13C /* WeiXinActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiXinActivity.swift; sourceTree = "<group>"; };
 		1445EDC01D0EA00F002BBF37 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		1445EDC11D0EA00F002BBF37 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		14644EE21C3A626300563391 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
@@ -216,6 +235,14 @@
 		1466E1C61C0EDADD00F2A32C /* AFNetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkHelper.m; sourceTree = "<group>"; };
 		1466E3581C0EDADD00F2A32C /* XHSaveHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHSaveHelper.swift; sourceTree = "<group>"; };
 		146A156F1C0AFE79000374CB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		146DF61F1D129D8E00C9E9B3 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		146DF6221D129D8E00C9E9B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		146DF6241D129D8E00C9E9B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		146DF62D1D129E5300C9E9B3 /* Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Share.entitlements; sourceTree = "<group>"; };
+		146DF62E1D129E8000C9E9B3 /* HuaBanNew.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HuaBanNew.entitlements; sourceTree = "<group>"; };
+		146DF62F1D129EFF00C9E9B3 /* String+YepShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+YepShare.swift"; sourceTree = "<group>"; };
+		146DF6341D129F8700C9E9B3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		146DF6361D129F9000C9E9B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		148EA1A61C0AC85C00C11A90 /* HuaBanNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaBanNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		148EA1A91C0AC85C00C11A90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		148EA1B01C0AC85C00C11A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -449,6 +476,7 @@
 		142A318B1D0D6B0B00C0B232 /* WeiXin */ = {
 			isa = PBXGroup;
 			children = (
+				1439868F1D13A9B4005AB13C /* WeiXinActivity */,
 				142A31AA1D0E51C000C0B232 /* OpenSDK1.7.1 */,
 				142A31921D0D6B0B00C0B232 /* WeiXinshareDelegate.swift */,
 				142A31931D0D6B0B00C0B232 /* WeiXinShareHelp.swift */,
@@ -485,6 +513,16 @@
 				1438F9001C0EBA840000DC77 /* PathExtensionFile.swift */,
 			);
 			path = FileManager;
+			sourceTree = "<group>";
+		};
+		1439868F1D13A9B4005AB13C /* WeiXinActivity */ = {
+			isa = PBXGroup;
+			children = (
+				143986901D13A9B4005AB13C /* WeiXinActivity.bundle */,
+				143986911D13A9B4005AB13C /* WeiXinActivity.strings */,
+				143986921D13A9B4005AB13C /* WeiXinActivity.swift */,
+			);
+			path = WeiXinActivity;
 			sourceTree = "<group>";
 		};
 		14644EE11C3A626300563391 /* SVProgressHUD */ = {
@@ -525,10 +563,24 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		146DF61E1D129D8E00C9E9B3 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				146DF62D1D129E5300C9E9B3 /* Share.entitlements */,
+				146DF61F1D129D8E00C9E9B3 /* ShareViewController.swift */,
+				146DF62F1D129EFF00C9E9B3 /* String+YepShare.swift */,
+				146DF6211D129D8E00C9E9B3 /* MainInterface.storyboard */,
+				146DF6241D129D8E00C9E9B3 /* Info.plist */,
+				146DF6351D129F8700C9E9B3 /* Localizable.strings */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		148EA19D1C0AC85C00C11A90 = {
 			isa = PBXGroup;
 			children = (
 				148EA1A81C0AC85C00C11A90 /* HuaBanNew */,
+				146DF61E1D129D8E00C9E9B3 /* Share */,
 				148EA1A71C0AC85C00C11A90 /* Products */,
 				BCD8E616E2DD10E390A405C8 /* Frameworks */,
 				24E4B16B037A877B09DBF3A4 /* Pods */,
@@ -546,6 +598,7 @@
 		148EA1A81C0AC85C00C11A90 /* HuaBanNew */ = {
 			isa = PBXGroup;
 			children = (
+				146DF62E1D129E8000C9E9B3 /* HuaBanNew.entitlements */,
 				14F445E91C0B009200D1FF41 /* Class */,
 				14F445B81C0B003600D1FF41 /* Global */,
 				14F445AB1C0B001300D1FF41 /* CustomLib */,
@@ -1020,6 +1073,7 @@
 				148EA1A41C0AC85C00C11A90 /* Resources */,
 				79A7B7333AD260C21AFBDD61 /* Embed Pods Frameworks */,
 				02D55A9D24B9ACF19E0D68AD /* Copy Pods Resources */,
+				146DF6141D129CE700C9E9B3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -1036,13 +1090,18 @@
 		148EA19E1C0AC85C00C11A90 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = CXH;
 				TargetAttributes = {
 					148EA1A51C0AC85C00C11A90 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = G3HJ44W84H;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1053,6 +1112,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 148EA19D1C0AC85C00C11A90;
 			productRefGroup = 148EA1A71C0AC85C00C11A90 /* Products */;
@@ -1075,6 +1135,8 @@
 				14F4461E1C0B011800D1FF41 /* BoardHeaderView.xib in Resources */,
 				14F446EC1C0B149C00D1FF41 /* categories in Resources */,
 				14F446241C0B011800D1FF41 /* PinDetailHeaderView.xib in Resources */,
+				143986931D13A9B4005AB13C /* WeiXinActivity.bundle in Resources */,
+				143986941D13A9B4005AB13C /* WeiXinActivity.strings in Resources */,
 				142A31B11D0E51C000C0B232 /* README.txt in Resources */,
 				14F446001C0B011000D1FF41 /* HBSayCollectionViewCell.xib in Resources */,
 				14F446201C0B011800D1FF41 /* CustomPageInfoView.xib in Resources */,
@@ -1177,6 +1239,7 @@
 				14F446251C0B011800D1FF41 /* XHCategoryTableView.swift in Sources */,
 				14F4467F1C0B013500D1FF41 /* Cover.swift in Sources */,
 				1491E1201C2D2A1900AD0C42 /* FXBlurView.m in Sources */,
+				143986951D13A9B4005AB13C /* WeiXinActivity.swift in Sources */,
 				14F445A11C0AFFD900D1FF41 /* UIApplication+JTSImageViewController.m in Sources */,
 				14F445A01C0AFFD900D1FF41 /* JTSSimpleImageDownloader.m in Sources */,
 				14F446861C0B013500D1FF41 /* Recommends.swift in Sources */,
@@ -1276,6 +1339,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		146DF6211D129D8E00C9E9B3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146DF6221D129D8E00C9E9B3 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		146DF6351D129F8700C9E9B3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146DF6341D129F8700C9E9B3 /* zh-Hans */,
+				146DF6361D129F9000C9E9B3 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		148EA1B21C0AC85C00C11A90 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1376,8 +1456,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_MODULE_DEBUGGING = YES;
+				CODE_SIGN_ENTITLEMENTS = HuaBanNew/HuaBanNew.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1412,8 +1494,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_MODULE_DEBUGGING = YES;
+				CODE_SIGN_ENTITLEMENTS = HuaBanNew/HuaBanNew.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,0 +1,12 @@
+/* 
+  WeiXinActivity.strings
+  HuaBanNew
+
+  Created by chengxianghe on 16/6/16.
+  Copyright © 2016年 CXH. All rights reserved.
+*/
+
+"weixin-share-title"  = "微信分享";
+"weixin-session"      = "微信会话";
+"weixin-timeline"     = "微信朋友圈";
+"weixin-favorite"     = "微信收藏";

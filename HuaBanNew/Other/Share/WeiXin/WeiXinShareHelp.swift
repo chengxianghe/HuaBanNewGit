@@ -24,7 +24,7 @@ class WeiXinShareHelp: NSObject {
      - returns: Bool
      */
     func sendText(text: String, InScene scene:WXScene) -> Bool {
-        if !self.checkWeiXinClient() {
+        if !WeiXinShareHelp.checkWeiXinClient() {
             return false;
         }
 
@@ -42,7 +42,7 @@ class WeiXinShareHelp: NSObject {
      - returns: Bool
      */
     func sendImageData(image: UIImage?, InScene scene:WXScene) -> Bool {
-        if !self.checkWeiXinClient() {
+        if !WeiXinShareHelp.checkWeiXinClient() {
             return false;
         }
         // 原图 最多不能超过10M 10485760
@@ -54,8 +54,8 @@ class WeiXinShareHelp: NSObject {
         ext.imageData = imageData;
         
         let message = WXMediaMessage()
-        message.title = "titlesss";
-        message.description = "description";
+//        message.title = "titlesss";
+//        message.description = "description";
         message.mediaObject = ext;
         
         //缩略图数据大小不能超过32K - 32768
@@ -83,7 +83,7 @@ class WeiXinShareHelp: NSObject {
      - returns: Bool
      */
     func sendLinkURL(urlString: String, title: String, description: String, thumbImage: UIImage?, InScene scene:WXScene) -> Bool {
-        if !self.checkWeiXinClient() {
+        if !WeiXinShareHelp.checkWeiXinClient() {
             return false;
         }
         let ext = WXWebpageObject()
@@ -126,7 +126,7 @@ class WeiXinShareHelp: NSObject {
      
      - returns: Bool
      */
-    func checkWeiXinClient() -> Bool {
+    class func checkWeiXinClient() -> Bool {
         if(WXApi.isWXAppInstalled() == false) {
             print("抱歉,您没有安装微信")
             return false;

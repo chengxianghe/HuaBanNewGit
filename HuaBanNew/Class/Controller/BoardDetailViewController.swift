@@ -109,43 +109,70 @@ class BoardDetailViewController: BaseViewController,UICollectionViewDelegate,UIC
     
     func setShareToThird() {
         
-        ShareManager.manager().showShareViewWithBlock({ (type) -> () in
-            if type == nil {
-                return;
-            }
-            let title = "花瓣的分享";
-            let url = "http://10.125.2.43/webApp/group/group_home.php?imId=b_663&groupId=135491230233526300";
-            let imageUrl = "http://115.182.236.41/v1/img/T1daATBmVT1RXrhCrK.jpg"
-            let describ = "我就是想试一下行不行?";
-            let selectedCell = self.collectionView.cellForItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0)) as? XHWaterCollectionCell
-            let image = selectedCell?.photoImageView.image
-            
-            
-            switch (type!) {
-            case .WeiBoShare:
-                print("分享到新浪微博");
-                
-                SinaShareHelp.currentHelp().shareText(title, shareImage: image, url: url)
-                
-            case .WeiXinFriendsShare:
-                print("分享到朋友圈");
-                //    weixin
-                WeiXinShareHelp.currentHelp().sendLinkURL(url, title: title, description: describ, thumbImage: image, InScene: WXSceneTimeline)
-            case .WeiXinShare:
-                print("分享到微信好友");
-                WeiXinShareHelp.currentHelp().sendImageData(image, InScene: WXSceneSession)
-            case .WeiXinFavoriteShare:
-                print("分享到微信收藏");
-                WeiXinShareHelp.currentHelp().sendImageData(image, InScene: WXSceneFavorite)
-            case .QZoneShare:
-                print("分享到QQ空间");
-                QQShareHelp.currentHelp().sendLinkUrl(title, description: describ, imageUrl: imageUrl, url: url)
-            case .QQShare:
-                print("分享到QQ");
-                QQShareHelp.currentHelp().sendImage(image, title: title, desc: describ)
-            }
-            
-        })
+        let title = "花瓣的分享";
+        let url = "http://10.125.2.43/webApp/group/group_home.php?imId=b_663&groupId=135491230233526300";
+//        let imageUrl = "http://115.182.236.41/v1/img/T1daATBmVT1RXrhCrK.jpg"
+        let describ = "我就是想试一下行不行?";
+        let selectedCell = self.collectionView.cellForItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0)) as? XHWaterCollectionCell
+        let image = selectedCell?.photoImageView.image
+        
+        if image == nil {
+            return
+        }
+        
+        let shareUrl = NSURL(string: url)
+        let arr = [WeiXinSessionActivity(),WeiXinTimelineActivity(),WeiXinFavoriteActivity()];
+        let activitys: [WeiXinBaseActivity] = arr.map { (item) -> WeiXinBaseActivity in
+            item.shareDescription = describ
+            item.title = title
+            return item
+        }
+        let thumbImageData = ShareManager.scaleImageDataForSize(image!, limitDataSize: 30000);
+        
+        let activityViewController = UIActivityViewController(activityItems: [shareUrl!, thumbImageData!, title], applicationActivities: activitys)
+        
+        activityViewController.excludedActivityTypes = [UIActivityTypeMail]
+        self.presentViewController(activityViewController, animated: true) {
+            print("activity")
+        }
+        
+//        ShareManager.manager().showShareViewWithBlock({ (type) -> () in
+//            if type == nil {
+//                return;
+//            }
+//            let title = "花瓣的分享";
+//            let url = "http://10.125.2.43/webApp/group/group_home.php?imId=b_663&groupId=135491230233526300";
+//            let imageUrl = "http://115.182.236.41/v1/img/T1daATBmVT1RXrhCrK.jpg"
+//            let describ = "我就是想试一下行不行?";
+//            let selectedCell = self.collectionView.cellForItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0)) as? XHWaterCollectionCell
+//            let image = selectedCell?.photoImageView.image
+//            
+//            
+//            switch (type!) {
+//            case .WeiBoShare:
+//                print("分享到新浪微博");
+//                
+//                SinaShareHelp.currentHelp().shareText(title, shareImage: image, url: url)
+//                
+//            case .WeiXinFriendsShare:
+//                print("分享到朋友圈");
+//                //    weixin
+//                WeiXinShareHelp.currentHelp().sendLinkURL(url, title: title, description: describ, thumbImage: image, InScene: WXSceneTimeline)
+//            case .WeiXinShare:
+//                print("分享到微信好友");
+//                WeiXinShareHelp.currentHelp().sendImageData(image, InScene: WXSceneSession)
+//            case .WeiXinFavoriteShare:
+//                print("分享到微信收藏");
+//                WeiXinShareHelp.currentHelp().sendImageData(image, InScene: WXSceneFavorite)
+//            case .QZoneShare:
+//                print("分享到QQ空间");
+//                QQShareHelp.currentHelp().sendLinkUrl(title, description: describ, imageUrl: imageUrl, url: url)
+//            case .QQShare:
+//                print("分享到QQ");
+//                QQShareHelp.currentHelp().sendImage(image, title: title, desc: describ)
+//            }
+//        
+//        })
         
     }
     
