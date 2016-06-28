@@ -9,8 +9,6 @@
 
 #import "MJRefreshComponent.h"
 #import "MJRefreshConst.h"
-#import "UIView+MJExtension.h"
-#import "UIScrollView+MJRefresh.h"
 
 @interface MJRefreshComponent()
 @property (strong, nonatomic) UIPanGestureRecognizer *pan;
@@ -133,43 +131,13 @@
     self.refreshingAction = action;
 }
 
-- (NSString *)localizedStringForKey:(NSString *)key{
-    return [self localizedStringForKey:key withDefault:nil];
-}
-
-- (NSString *)localizedStringForKey:(NSString *)key withDefault:(NSString *)defaultString
-{
-    static NSBundle *bundle = nil;
-    if (bundle == nil)
-    {
-        NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"MJRefresh" ofType:@"bundle"];
-        
-        bundle = [NSBundle bundleWithPath:bundlePath];
-        NSString *language = [[NSLocale preferredLanguages] count]? [NSLocale preferredLanguages][0]: @"en";
-        if ([UIDevice currentDevice].systemVersion.floatValue >= 9.0) {
-            NSRange range = [language rangeOfString:@"-" options:NSBackwardsSearch];
-            language = [language substringToIndex:range.location];
-        }
-        if (![[bundle localizations] containsObject:language])
-        {
-            language = [language componentsSeparatedByString:@"-"][0];
-        }
-        if ([[bundle localizations] containsObject:language])
-        {
-            bundlePath = [bundle pathForResource:language ofType:@"lproj"];
-        }
-
-        bundle = [NSBundle bundleWithPath:bundlePath] ?: [NSBundle mainBundle];
-    }
-    defaultString = [bundle localizedStringForKey:key value:defaultString table:nil];
-    return [[NSBundle mainBundle] localizedStringForKey:key value:defaultString table:nil];
-}
-
 - (void)setState:(MJRefreshState)state
 {
     _state = state;
     
-    [self setNeedsLayout];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setNeedsLayout];
+    });
 }
 
 #pragma mark 进入刷新状态
@@ -192,10 +160,24 @@
     }
 }
 
+- (void)beginRefreshingWithCompletionBlock:(void (^)())completionBlock
+{
+    self.beginRefreshingCompletionBlock = completionBlock;
+    
+    [self beginRefreshing];
+}
+
 #pragma mark 结束刷新状态
 - (void)endRefreshing
 {
     self.state = MJRefreshStateIdle;
+}
+
+- (void)endRefreshingWithCompletionBlock:(void (^)())completionBlock
+{
+    self.endRefreshingCompletionBlock = completionBlock;
+    
+    [self endRefreshing];
 }
 
 #pragma mark 是否正在刷新
@@ -249,6 +231,9 @@
         }
         if ([self.refreshingTarget respondsToSelector:self.refreshingAction]) {
             MJRefreshMsgSend(MJRefreshMsgTarget(self.refreshingTarget), self.refreshingAction, self);
+        }
+        if (self.beginRefreshingCompletionBlock) {
+            self.beginRefreshingCompletionBlock();
         }
     });
 }

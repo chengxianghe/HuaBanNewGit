@@ -122,7 +122,7 @@ class BoardDetailViewController: BaseViewController,UICollectionViewDelegate,UIC
         
         let shareUrl = NSURL(string: url)
         let arr = [WeiXinSessionActivity(),WeiXinTimelineActivity(),WeiXinFavoriteActivity()];
-        let activitys: [WeiXinBaseActivity] = arr.map { (item) -> WeiXinBaseActivity in
+        let activitys: [WeiXinActivity] = arr.map { (item) -> WeiXinActivity in
             item.shareDescription = describ
             item.title = title
             return item

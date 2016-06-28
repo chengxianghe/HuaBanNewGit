@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WeiXinBaseActivity: UIActivity {
+class WeiXinActivity: UIActivity {
     var title: String?
     var shareDescription: String?
     var image: UIImage?
@@ -109,7 +109,7 @@ class WeiXinBaseActivity: UIActivity {
     
 }
 
-class WeiXinSessionActivity: WeiXinBaseActivity {
+class WeiXinSessionActivity: WeiXinActivity {
     override init() {
         super.init()
         scene = WXSceneSession
@@ -132,7 +132,7 @@ class WeiXinSessionActivity: WeiXinBaseActivity {
     }
 }
 
-class WeiXinTimelineActivity: WeiXinBaseActivity {
+class WeiXinTimelineActivity: WeiXinActivity {
     override init() {
         super.init()
         scene = WXSceneTimeline
@@ -152,7 +152,7 @@ class WeiXinTimelineActivity: WeiXinBaseActivity {
     }
 }
 
-class WeiXinFavoriteActivity: WeiXinBaseActivity {
+class WeiXinFavoriteActivity: WeiXinActivity {
     override init() {
         super.init()
         scene = WXSceneFavorite

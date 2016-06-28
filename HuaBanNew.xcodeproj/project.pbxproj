@@ -34,7 +34,6 @@
 		1438F9051C0EBA960000DC77 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438F9041C0EBA960000DC77 /* Result.swift */; };
 		1438F9071C0EBAD20000DC77 /* FileManagerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438F9061C0EBAD20000DC77 /* FileManagerExt.swift */; };
 		143986931D13A9B4005AB13C /* WeiXinActivity.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 143986901D13A9B4005AB13C /* WeiXinActivity.bundle */; };
-		143986941D13A9B4005AB13C /* WeiXinActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143986911D13A9B4005AB13C /* WeiXinActivity.strings */; };
 		143986951D13A9B4005AB13C /* WeiXinActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143986921D13A9B4005AB13C /* WeiXinActivity.swift */; };
 		1445EDC21D0EA00F002BBF37 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1445EDC01D0EA00F002BBF37 /* TencentOpenApi_IOS_Bundle.bundle */; };
 		1445EDC31D0EA00F002BBF37 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1445EDC11D0EA00F002BBF37 /* TencentOpenAPI.framework */; };
@@ -50,6 +49,7 @@
 		148EA1B11C0AC85C00C11A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148EA1B01C0AC85C00C11A90 /* Assets.xcassets */; };
 		148EA1B41C0AC85C00C11A90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148EA1B21C0AC85C00C11A90 /* LaunchScreen.storyboard */; };
 		1491E1201C2D2A1900AD0C42 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1491E11F1C2D2A1900AD0C42 /* FXBlurView.m */; };
+		149D6BA81D13CED90067610E /* WeiXinActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = 149D6BA71D13CED90067610E /* WeiXinActivity.strings */; };
 		149DD9FA1C0B174B00B0F87C /* WebImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149DD9F91C0B174B00B0F87C /* WebImageExt.swift */; };
 		149DDA0B1C0D43CC00B0F87C /* NavCustomPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149DDA0A1C0D43CC00B0F87C /* NavCustomPop.swift */; };
 		149DDA0F1C0D48E200B0F87C /* UINavigation+Pop.m in Sources */ = {isa = PBXBuildFile; fileRef = 149DDA0E1C0D48E200B0F87C /* UINavigation+Pop.m */; };
@@ -216,7 +216,6 @@
 		1438F9041C0EBA960000DC77 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		1438F9061C0EBAD20000DC77 /* FileManagerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerExt.swift; sourceTree = "<group>"; };
 		143986901D13A9B4005AB13C /* WeiXinActivity.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiXinActivity.bundle; sourceTree = "<group>"; };
-		143986911D13A9B4005AB13C /* WeiXinActivity.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = WeiXinActivity.strings; sourceTree = "<group>"; };
 		143986921D13A9B4005AB13C /* WeiXinActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiXinActivity.swift; sourceTree = "<group>"; };
 		1445EDC01D0EA00F002BBF37 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		1445EDC11D0EA00F002BBF37 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
@@ -250,6 +249,7 @@
 		148EA1B51C0AC85C00C11A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1491E11E1C2D2A1900AD0C42 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		1491E11F1C2D2A1900AD0C42 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		149D6BA71D13CED90067610E /* WeiXinActivity.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = WeiXinActivity.strings; sourceTree = "<group>"; };
 		149DD9F91C0B174B00B0F87C /* WebImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebImageExt.swift; sourceTree = "<group>"; };
 		149DDA0A1C0D43CC00B0F87C /* NavCustomPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavCustomPop.swift; sourceTree = "<group>"; };
 		149DDA0D1C0D48E200B0F87C /* UINavigation+Pop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigation+Pop.h"; sourceTree = "<group>"; };
@@ -518,8 +518,8 @@
 		1439868F1D13A9B4005AB13C /* WeiXinActivity */ = {
 			isa = PBXGroup;
 			children = (
+				149D6BA71D13CED90067610E /* WeiXinActivity.strings */,
 				143986901D13A9B4005AB13C /* WeiXinActivity.bundle */,
-				143986911D13A9B4005AB13C /* WeiXinActivity.strings */,
 				143986921D13A9B4005AB13C /* WeiXinActivity.swift */,
 			);
 			path = WeiXinActivity;
@@ -1074,6 +1074,7 @@
 				79A7B7333AD260C21AFBDD61 /* Embed Pods Frameworks */,
 				02D55A9D24B9ACF19E0D68AD /* Copy Pods Resources */,
 				146DF6141D129CE700C9E9B3 /* Embed App Extensions */,
+				14FA8A971D22690C00315931 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1132,11 +1133,11 @@
 				148EA1B41C0AC85C00C11A90 /* LaunchScreen.storyboard in Resources */,
 				14F446221C0B011800D1FF41 /* MineHeaderView.xib in Resources */,
 				141FBC971C151DE000073325 /* NomalImageTableCell.xib in Resources */,
+				149D6BA81D13CED90067610E /* WeiXinActivity.strings in Resources */,
 				14F4461E1C0B011800D1FF41 /* BoardHeaderView.xib in Resources */,
 				14F446EC1C0B149C00D1FF41 /* categories in Resources */,
 				14F446241C0B011800D1FF41 /* PinDetailHeaderView.xib in Resources */,
 				143986931D13A9B4005AB13C /* WeiXinActivity.bundle in Resources */,
-				143986941D13A9B4005AB13C /* WeiXinActivity.strings in Resources */,
 				142A31B11D0E51C000C0B232 /* README.txt in Resources */,
 				14F446001C0B011000D1FF41 /* HBSayCollectionViewCell.xib in Resources */,
 				14F446201C0B011800D1FF41 /* CustomPageInfoView.xib in Resources */,
@@ -1173,6 +1174,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuaBanNew/Pods-HuaBanNew-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		14FA8A971D22690C00315931 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SKIP_DEBUG_BUILDS=0     #在Debug模式下编译是否自动上传符号表 0 上传 1不上传\nSKIP_SIMULATOR_BUILDS=0 #在模拟器环境下编译是否自动上传符号表 0上传 1不上传\nAPP_KEY=\"8ffcb6d783c95be9007450f5186de7bb\"              #请填写应用的App Key\nAPP_SECRET=\"862f76f69c4b7de92d73e665a29a4829\"           #请填写应用的App Secret，可向应用创建者索要\nSCRIPT_SRC=$(find \"$PROJECT_DIR\" -name 'Bugtags_dsym_autoupload.sh' | head -1)\nif [ ! \"${SCRIPT_SRC}\" ]; then\necho \"Bugtags: err: script not found. Make sure that you're including Bugtags.bundle in your project directory\"\nexit 1\nfi\nsource \"${SCRIPT_SRC}\"";
 		};
 		59F6A7BDFAECB607CCC25118 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1458,7 +1472,7 @@
 				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_ENTITLEMENTS = HuaBanNew/HuaBanNew.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1496,7 +1510,7 @@
 				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_ENTITLEMENTS = HuaBanNew/HuaBanNew.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
